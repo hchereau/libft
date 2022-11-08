@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 11:21:57 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/08 17:24:01 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/08 17:26:12 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/08 18:05:38 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include <string.h>
 
-int	ft_isalnum(int c)
+size_t strlen(const char *s)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'))
-		return (4096);
-	return (0);
+	int i;
+	
+	i = 0;
+	while (i < s
 }
-/*int main()
-{
-	printf("%d \n",ft_isalnum('9'));
-	printf("%d",isalnum('9'));
-}*/

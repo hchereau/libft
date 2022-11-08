@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 11:21:57 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/08 17:24:01 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/08 17:22:18 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/08 17:23:42 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
-
-int	ft_isalnum(int c)
+int	isprint(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'))
-		return (4096);
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
 	return (0);
 }
-/*int main()
-{
-	printf("%d \n",ft_isalnum('9'));
-	printf("%d",isalnum('9'));
-}*/
