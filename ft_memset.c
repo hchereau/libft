@@ -1,32 +1,36 @@
-/* ************************************************************************** */
+wwwwww*********************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 17:26:12 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/09 11:51:30 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/09 10:31:54 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/09 13:46:28 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-size_t	ft_strlen(const char *s)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (i < n)
 	{
+		((unsigned char *)s)[i] = (unsigned char)c;
 		i++;
 	}
-	return (i);
+	return (s);
 }
 /*
-int main(int argc, char **argv)
+int    main()
 {
-	printf("%ld", strlen(argv[0]));
-	printf("%ld", ft_strlen(argv[0]));
-}*/
+    char str[] = "whatttttttttttt";
+
+    printf("%s\n", (char *)ft_memset(str,'f', 2));
+	printf("%s", (char *)memset(str,'f', 2));
+} 
+*/

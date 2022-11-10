@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 17:26:12 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/09 11:51:30 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/09 14:05:52 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/09 14:27:40 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include <libft.h>
 
-size_t	ft_strlen(const char *s)
+void	bzero(void *s,size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	return ft_memset(s, '\0', n);
 }
-/*
-int main(int argc, char **argv)
-{
-	printf("%ld", strlen(argv[0]));
-	printf("%ld", ft_strlen(argv[0]));
-}*/
+
+
+

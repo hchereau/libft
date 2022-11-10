@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 17:26:12 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/09 11:51:30 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/09 14:10:40 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/09 14:28:59 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-/*
-int main(int argc, char **argv)
-{
-	printf("%ld", strlen(argv[0]));
-	printf("%ld", ft_strlen(argv[0]));
-}*/
+int	ft_isalnum(int	c);
+int	ft_isalpha(int	c);
+int	ft_ascii(int	c);
+int	ft_isdigit(int	c);
+int	ft_isprint(int	c);
+void	*	ft_memset(void	*s, int c, size_t n);
+size_t	ft_strlen(const char *s);
+void	bzero(void *s, size_t n);
