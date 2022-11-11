@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 09:20:52 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/10 09:20:56 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/10 15:25:36 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/11 10:10:21 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.a"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-
-	i = 0;
-	while (i < n)
+	while (i < n && s[i]!= '\0')
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
-		i++;
+		if (s[i] == c)
+			return (str + i);
 	}
-	return (s);
+	return (0);
 }
-/*
-int    main()
-{
-    char str[] = "whatttttttttttt";
 
-    printf("%s\n", (char *)ft_memset(str,'f', 2));
-	printf("%s", (char *)memset(str,'f', 2));
-} 
-*/

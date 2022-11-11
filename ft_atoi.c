@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 09:20:52 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/10 09:20:56 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/11 11:57:08 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/11 11:57:14 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
-
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_atoi(char *str)
 {
-	size_t	i;
+	int	i;
+	int	sign;
+	int	nbr;
 
 	i = 0;
-	while (i < n)
+	sign = 1;
+	nbr = 0;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
+		if (str[i] == '-')
+		{
+			sign *= -1;
+			i++;
+		}
+		if (str[i] == '+')
+			i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nbr = nbr * 10 + str[i] - '0';
 		i++;
 	}
-	return (s);
+	return (nbr * sign);
 }
-/*
-int    main()
-{
-    char str[] = "whatttttttttttt";
-
-    printf("%s\n", (char *)ft_memset(str,'f', 2));
-	printf("%s", (char *)memset(str,'f', 2));
-} 
-*/

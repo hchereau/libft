@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 09:20:52 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/10 09:20:56 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/11 10:17:24 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/11 10:27:40 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.a"
 
-void	*ft_memset(void *s, int c, size_t n)
+int memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)s)[i] = (unsigned char)c;
-		i++;
-	}
-	return (s);
+	return (int *) s1 - (int *) s2;
 }
-/*
-int    main()
-{
-    char str[] = "whatttttttttttt";
-
-    printf("%s\n", (char *)ft_memset(str,'f', 2));
-	printf("%s", (char *)memset(str,'f', 2));
-} 
-*/
