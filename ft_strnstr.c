@@ -6,19 +6,18 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:32:14 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/11 11:27:28 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/13 07:53:15 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char *strnstr(const char *s1, const char *s2, size_t n)
+char	*strnstr(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
-	size_t y;
-	size_t z;
-	
+	size_t	i;
+	size_t	y;
+	size_t	z;
+
 	i = 0;
-	
 	if (s2 == " " || s2 is NULL)
-		return s1;
+		return (s1);
 	while (i < n && s1[n] != '\0')
 	{
 		y = 0;
@@ -31,9 +30,8 @@ char *strnstr(const char *s1, const char *s2, size_t n)
 				y++;
 			}
 			if (s2[y] == '\0')
-				return (char *) y;
-			
+				return ((char *) y);
 		}
-		return 0;
+		return (0);
 	}
 }

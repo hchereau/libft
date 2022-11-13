@@ -6,11 +6,11 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:57:53 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/11 09:35:37 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/13 08:07:07 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	strncmp(const char *s1, const char *s2)
 {
-	return s1 - s2;
+	return (s1 - s2);
 }

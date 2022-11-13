@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 10:17:24 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/11 10:27:40 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/13 07:48:45 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/13 07:50:29 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
+//#include "libft.a"
 
-int memcmp(const void *s1, const void *s2, size_t n)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	return (int *) s1 - (int *) s2;
+	return ((int *) s1 - (int *) s2);
 }

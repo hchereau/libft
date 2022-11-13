@@ -6,15 +6,15 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:20:34 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/10 13:52:23 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/13 08:06:33 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	toupper(int c)
+int	tolower(int c)
 {
-	if ( c >= 'A' && c <= 'Z' )
+	if (c >= 'A' && c <= 'Z')
 	{
 		c = c + 32;
 	}

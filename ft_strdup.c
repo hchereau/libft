@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 14:02:46 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/13 08:06:03 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/13 07:14:18 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/13 08:10:19 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*strdup(const char *s)
 {
-	int	i;
+	size_t	size;
+	char	*tab;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == c)
-			return (str + i);
-		i++;
-	}
-	return (0);
+	size = ft_strlen(s);
+	tab = (char *)malloc(size);
+	if (tab != NULL)
+		ft_strlcpy(tab, s, size);
+	return (tab);
 }

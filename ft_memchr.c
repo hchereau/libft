@@ -6,20 +6,20 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:25:36 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/11 10:10:21 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/13 08:04:33 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
+//#include "libft.a"
 
 void	*memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
-	while (i < n && s[i]!= '\0')
+
+	while (i < n && s[i] != '\0')
 	{
 		if (s[i] == c)
 			return (str + i);
 	}
 	return (0);
 }
-
