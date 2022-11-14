@@ -6,10 +6,10 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:32:14 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/13 07:53:15 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/14 10:44:31 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-char	*strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	size_t	y;
