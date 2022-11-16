@@ -1,25 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/13 07:14:18 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/16 11:12:36 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/16 11:51:45 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/16 12:17:37 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 
-char	*strdup(const char *s)
+
+t_list *ft_lstnew(void *content)
 {
-	size_t	size;
-	char	*tab;
 
-	size = ft_strlen(s);
-	tab = (char *)malloc(size * sizeof(char));
-	if (tab != NULL)
-		ft_strlcpy(tab, s, size);
-	return (tab);
 }
+

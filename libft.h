@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:10:40 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/14 12:39:42 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/16 11:41:48 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <bsd/string.h>
 # include <stdbool.h>
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -40,4 +41,11 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *s, int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 #endif
