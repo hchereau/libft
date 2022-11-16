@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 14:02:46 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/13 08:08:06 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:10:28 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ char	*strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		i++;
 	}
 	while (i >= 0)
 	{
-		if (str[i] == c)
-			return (str + i);
+		if (s[i] == c)
+			return (s + i);
 		i--;
 	}
 	return (0);
