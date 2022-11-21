@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lsadd_back.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 15:32:48 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/21 12:07:11 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/21 12:46:14 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/21 14:40:56 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if ( lst != NULL && new != NULL)
+	t_list *curr;
+
+	if (lst != NULL)
 	{
-		new->next = *lst;
-		*lst = new;
+		if (*lst != NULL)
+		{
+			curr = *lst;
+			while (curr->next != NULL)
+				curr = curr->next;
+			curr->next = new;
+		}
+		else
+			*list = new;
 	}
 }
-/*
-int	main()
-{
-	char	content[] = "salut";
-	
-}
-*/

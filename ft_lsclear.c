@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lsclear.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 15:32:48 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/21 12:07:11 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/21 15:32:53 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/21 16:22:45 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if ( lst != NULL && new != NULL)
+	if (lst != NULL)
 	{
-		new->next = *lst;
-		*lst = new;
+		if (del != NULL)
+		{
+			ft_lstclear(&(lst->next),del);
+			ft_lstdone(lst, del);
+			*lst = NULL;
+		}
 	}
 }
-/*
-int	main()
-{
-	char	content[] = "salut";
-	
-}
-*/
