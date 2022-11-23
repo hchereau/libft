@@ -9,8 +9,8 @@
 /*   Updated: 2022/11/08 17:25:33 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <ctype.h>
-#include <stido.h>
+
+#include "libft.h"
 
 int	ft_ascii(int c)
 {

@@ -10,16 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.a"
+#include "libft.h"
 
 void	*memchr(const void *s, int c, size_t n)
 {
 	size_t	i;
 
-	while (i < n && s[i] != '\0')
+	i = 0;
+	c = (unsigned char)c;
+	while (i < n)
 	{
-		if (s[i] == c)
-			return (str + i);
+		if (((uint8_t *)s)[i] == c)
+			return ((void *)s + i);
+		i++;
 	}
 	return (0);
 }
