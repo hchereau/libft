@@ -14,5 +14,14 @@
 
 int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	return ((int *) s1 - (int *) s2);
+	size_t	i;
+	
+	i = 0;
+	while(i < n)
+	{
+		if (((uint8_t *)s1)[i] != ((uint8_t *)s2)[i])
+			return (((uint8_t *)s1)[i] - ((uint8_t *)s2)[i]);
+		i++;
+	}
+	return (0);
 }

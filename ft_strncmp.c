@@ -10,7 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	strncmp(const char *s1, const char *s2)
+#include "libft.h"
+
+int	strncmp(const char *s1, const char *s2, size_t n)
 {
-	return (s1 - s2);
+	size_t	i;
+	unsigned	char	s3;
+	unsigned	char	s4;
+	
+	i = 0;
+	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	{
+		s3 = s1[i];
+		s4 = s2[i];
+		if (s3 != s4)
+			return (s3 - s4);
+		i++;
+	}
+	return (0);
 }
