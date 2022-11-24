@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 11:56:06 by hchereau          #+#    #+#             */
-/*   Updated: 2022/07/20 11:56:08 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/24 23:02:16 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	j;
 	unsigned int	size2;
 	unsigned int	size3;
 
-	size3 = ft_strlen(src);
+	size3 = ft_strlen((char *)src);
 	i = 0;
 	j = 0;
 	while (dest[j] != '\0')
