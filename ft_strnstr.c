@@ -6,9 +6,12 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:32:14 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/14 10:44:31 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/24 11:14:47 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
@@ -16,8 +19,8 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	size_t	z;
 
 	i = 0;
-	if (s2 == " " || s2 is NULL)
-		return (s1);
+	if (s2[0] == '\0')
+		return ((char *)s1);
 	while (i < n && s1[n] != '\0')
 	{
 		y = 0;
@@ -32,6 +35,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 			if (s2[y] == '\0')
 				return ((char *) y);
 		}
-		return (0);
 	}
+	return (0);
 }

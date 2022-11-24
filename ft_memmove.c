@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:26:28 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/13 08:01:02 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/24 14:45:37 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		while (n > 0)
 		{
-			((unsigned char *)dest)[n - 1] = ((unsigned char *)src)[n - 1];
+			((uint8_t *)dest)[n - 1] = ((const uint8_t *)src)[n - 1];
 			n--;
 		}
 	}
@@ -29,7 +29,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i = 0;
 		while (i < n)
 		{
-			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			((uint8_t *)dest)[i] = ((uint8_t *)src)[i];
 			i++;
 		}
 	}		
