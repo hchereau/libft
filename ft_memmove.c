@@ -6,11 +6,12 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 10:26:28 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/24 14:45:37 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:00:08 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -29,7 +30,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i = 0;
 		while (i < n)
 		{
-			((uint8_t *)dest)[i] = ((uint8_t *)src)[i];
+			((uint8_t *)dest)[i] = ((const uint8_t *)src)[i];
 			i++;
 		}
 	}		

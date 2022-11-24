@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:10:40 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/24 14:28:55 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:00:52 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 char	*ft_strchr(const char *s, int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 typedef struct	s_list
 {

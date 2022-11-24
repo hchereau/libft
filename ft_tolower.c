@@ -6,13 +6,13 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 13:20:34 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/13 08:06:33 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/24 15:08:13 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{
