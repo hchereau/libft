@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:43:44 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/26 12:45:10 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/26 14:49:23 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	isalpha_test(void)
 {
-	check_int_eq(ft_isalpha('l'), isalpha('l'));
+	printf("ISALPHA_TEST:\n\n");
+	check_int_eq(ft_isalpha('l'), isalpha('l'), 1);
 }

@@ -10,6 +10,11 @@ PATH_OBJS = objs/
 
 OBJS = $(patsubst %.c, ${PATH_OBJS}/%.o, ${SRCS})
 
+### TESTS
+
+TEST_FOLDER = test/
+RUN_TESTS = $(TEST_FOLDER)/run_test
+
 ### COMPILATION
 
 CC = clang
@@ -23,20 +28,29 @@ endif
 
 AR = ar rc
 
-all: ${NAME}
+all: $(NAME)
 
-${NAME}: ${OBJS}
-	${AR} ${NAME} ${OBJS}
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 
-${OBJS}: ${PATH_OBJS}/%.o: %.c
+$(OBJS): ${PATH_OBJS}/%.o: %.c
 	mkdir -p ${PATH_OBJS}
 	${CC} ${CFLAGS} -c $< -o $@
 
+test: $(NAME)
+	$(MAKE) -sC $(TEST_FOLDER)
+	./$(RUN_TESTS)
+
 clean:
 	${RM} -R ${PATH_OBJS}
+	$(MAKE) -C $(TEST_FOLDER) clean
 
 fclean: clean
 	${RM} ${NAME}
+	$(MAKE) -C $(TEST_FOLDER) fclean
 
 re: fclean
 	$(MAKE)
+
+.PHONY: all test clean fclean re
+.SILENT: test
