@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   utils.test.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/21 16:30:31 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/21 16:46:15 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/26 12:20:33 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/26 12:22:22 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+#include "libft.test.h"
+
+void	check_int_eq(const int a, const int b)
 {
-	if (lst != NULL)
-	{
-		if (f != NULL)
-			f(lst->content);
-	}
+	if (a == b)
+		printf("1 : ok \n");
+	else
+		printf("1 : ko \n");
 }

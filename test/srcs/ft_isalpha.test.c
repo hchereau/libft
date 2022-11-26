@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_isalpha.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/16 15:32:48 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/21 12:07:11 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/26 12:43:44 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/26 12:45:10 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+#include "libft.test.h"
+
+void	isalpha_test(void)
 {
-	if ( lst != NULL && new != NULL)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
+	check_int_eq(ft_isalpha('l'), isalpha('l'));
 }
-/*
-int	main()
-{
-	char	content[] = "salut";
-	
-}
-*/

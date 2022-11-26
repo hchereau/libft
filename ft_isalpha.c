@@ -5,26 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 11:44:36 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/24 14:18:37 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/26 11:29:28 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/26 12:40:53 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+int ft_isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-	{
-		return (1024);
-	}
-	return (0);
+	return (c >= 'A' && c <= 'Z');
 }
-/*int main()
-{
-	
-	printf("%d \n", ft_isalpha('?'));
-	printf("%d", isalpha('?'));
-	
-}
+/*
+fonction : isalpha
+	goal : verifier si le caractere est alphabetique
+	inputs = un int
+	output = un int
+	process
 */
+//		-> comparer si le caractere est dans l'ascci alphabetique

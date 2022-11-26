@@ -1,0 +1,56 @@
+NAME = run_test
+
+### SRCS
+
+PATH_SRCS = srcs/
+
+MAIN_SRCS += $(PATH_SRCS)/main.test.c
+
+SRCS += ft_isalpha.test.c
+SRCS += utils.test.c
+
+vpath %.c $(PATH_SRCS)
+
+### OBJS
+
+PATH_OBJS = objs/
+OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
+
+### INCLUDES
+
+INCLUDES = -I../
+TEST_INCLUDES = -Iincludes/
+HEADER = $(INCLUDES)/libft.test.h
+
+### LIB
+
+PATH_LIB = -L../
+
+LIB = ../libft.a
+
+### COMPILATION
+
+CC = clang
+
+CFLAGS += -Werror
+CFLAGS += -Wextra
+CFLAGS += -Wall
+CFLAGS += -fPIE
+
+all: ${NAME}
+
+${NAME}: ${OBJS}
+	$(CC) $(CFLAGS) $^ $(LIB) $(MAIN_SRCS) -o $@ $(INCLUDES) $(TEST_INCLUDES)
+
+${OBJS}: $(PATH_OBJS)/%.o: %.c
+	mkdir -p $(PATH_OBJS)
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES) $(TEST_INCLUDES)
+
+clean:
+	$(RM) -R $(PATH_OBJS)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean
+	$(MAKE)
