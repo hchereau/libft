@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/26 17:53:13 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/27 13:32:07 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@ int	main(void)
 	isalnum_test();	
 	isascii_test();
 	isprint_test();
-	strlen_test();	
+	strlen_test();
+	memset_test();
+	bzero_test();
 }
