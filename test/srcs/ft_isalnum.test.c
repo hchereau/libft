@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/26 17:53:13 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/26 15:06:41 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/26 16:22:06 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-int	main(void)
+void	isalnum_test(void)
 {
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();	
-	isascii_test();
-	isprint_test();
-	strlen_test();	
+	printf("\nISALNUM_TEST:\n\n");
+	check_int_sign_eq(ft_isalnum(-1), isalnum(-1), 1);
+	check_int_sign_eq(ft_isalnum('A'), isalnum('A'), 2);
+	check_int_sign_eq(ft_isalnum('5'), isalnum('5'), 3);
+	check_int_sign_eq(ft_isalnum('a'), isalnum('a'), 4);
+	
 }
+

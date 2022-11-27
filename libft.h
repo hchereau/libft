@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:25:53 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/26 12:39:01 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/26 18:02:43 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <ctype.h>
 # include <stdio.h>
+# include <string.h>
 
 typedef struct  s_list                                                           
 {                                                                                
@@ -23,5 +24,9 @@ typedef struct  s_list
 }					t_list;
 
 int	ft_isalpha(int c);
-
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
+int	ft_isascii(int c);
+int	ft_isprint(int c);
+size_t ft_strlen(const char *s);
 #endif

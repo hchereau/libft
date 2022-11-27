@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_memset.test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/26 17:53:13 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/26 18:22:40 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/26 19:43:40 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-int	main(void)
+
+void	check_create_array(int c, size_t size, size_t n)
 {
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();	
-	isascii_test();
-	isprint_test();
-	strlen_test();	
+	void	array1[1000];
+	void	array2[1000];
+
+	check_array_eq(ft_memset(array1, c, size), memset(array2, c, size), n);
+}
+
+void	memset_test(void)
+{
+	printf("\nMEMSET_TEST:\n\n");
+	check_create_array('a', 5, 1);	
+	check_create_array('z', 100, 2);
+	check_create_array(12, 0, 3);
+	check_create_array`(500, 25, 4);
+
+
+	
 }

@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 11:29:28 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/26 17:43:12 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/26 18:01:24 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/26 18:18:45 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+static	size_t	get_len(const char *s)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	size_t len;
+
+	len = 0;
+	while (s[len] != '\0')
+		++len;
+	return len;
 }
+ 
+size_t	ft_strlen(const char *s)
+{
+	return (get_len(s));	
+}
+
 /*
-fonction : isalpha
-	goal : verifier si le caractere est alphabetique
-	inputs = un int
-	output = un int
-	process
+strlen:
+but : renvoyer la longueur de la chaine s
+process:
+	-> compter le nombre caractere
+	-> renvoyer le nombre de caractere
+get_nbr:
+but: compter nombre de caractere de la chaine s
+input: const char *
+output: size_t
+process:
 */
-//		-> comparer si le caractere est dans l'ascci alphabetique

@@ -3,7 +3,11 @@ NAME = libft.a
 ### SRCS
 
 SRCS += ft_isalpha.c
-
+SRCS += ft_isdigit.c
+SRCS += ft_isalnum.c
+SRCS += ft_isascii.c
+SRCS += ft_isprint.c
+SRCS += ft_strlen.c
 ### OBJS
 
 PATH_OBJS = objs/
@@ -39,6 +43,7 @@ $(OBJS): ${PATH_OBJS}/%.o: %.c
 
 test: $(NAME)
 	$(MAKE) -sC $(TEST_FOLDER)
+	echo -n "\n<------TESTS------>\n\n\n"
 	./$(RUN_TESTS)
 
 clean:
