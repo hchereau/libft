@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/28 15:33:00 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/28 21:15:27 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ int	main(void)
 	memset_test();
 	bzero_test();
 	memcpy_test();
+	memmove_test();
 }

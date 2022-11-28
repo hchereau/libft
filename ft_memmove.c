@@ -1,0 +1,59 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/28 18:48:44 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/28 21:22:06 by hchereau         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+/*
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	static void *(*funcs[])(void *, const void, size_t) = {memcpy, inverse_memcpy};
+
+	return (funcs[dest < src](dest, src, n));
+}
+*/
+static void *inverse_memcpy(void *dest, const void *src, size_t n)
+{
+	while(n > 0)
+	{
+		((uint8_t *)dest)[n - 1] = ((const uint8_t *)src)[n - 1];
+		--n;
+	}
+	return	(dest);
+}
+
+void *ft_memmove(void *dest, const void *src, size_t n)
+{
+	if (src < dest)
+		dest = inverse_memcpy(dest, src, n);
+	else
+		dest = ft_memcpy(dest, src, n);
+	return (dest);	
+}
+
+/*
+ft_memmove
+goal : memcpy mais on peut chevaucher
+outputs : pointeur sur dest
+process:
+	-> verifier si la liste se chevauche en +1
+		-> memcpy depuis la fin
+	-> memcpy 
+	-> return dest
+*/
+
+/*
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	static void *(*funcs[])(void *, const void, size_t) = {memcpy, inverse_memcpy};
+
+	return (funcs[dest < src](dest, src, n));
+}*/

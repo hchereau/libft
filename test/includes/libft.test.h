@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:22:33 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/28 15:46:51 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/28 18:45:02 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # include <stdio.h>
 # include <ctype.h>
+# include <stdlib.h>
 # include "libft.h"
 
 # define GREEN "\033[32;1m"
@@ -31,6 +32,7 @@ void	strlen_test(void);
 void	memset_test(void);
 void	bzero_test(void);
 void	memcpy_test(void);
+void	memmove_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);

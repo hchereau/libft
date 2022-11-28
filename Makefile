@@ -11,6 +11,7 @@ SRCS += ft_strlen.c
 SRCS += ft_memset.c
 SRCS += ft_bzero.c
 SRCS += ft_memcpy.c
+SRCS += ft_memmove.c
 
 ### OBJS
 
@@ -31,7 +32,7 @@ CFLAGS += -Wextra
 CFLAGS += -Wall
 
 ifeq (${debug}, true)
-	CFLAGS += -fsanitize=address, undefined -g3
+	CFLAGS += -fsanitize=address,undefined -g3
 endif
 
 AR = ar rc
