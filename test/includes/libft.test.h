@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:22:33 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/27 13:29:52 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/28 15:46:51 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	isprint_test(void);
 void	strlen_test(void);
 void	memset_test(void);
 void	bzero_test(void);
+void	memcpy_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);

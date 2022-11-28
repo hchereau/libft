@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/28 15:33:00 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/28 15:55:22 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/28 17:06:01 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-int	main(void)
+void	*ft_memcpy(void *dest, void *src, size_t n)
 {
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();	
-	isascii_test();
-	isprint_test();
-	strlen_test();
-	memset_test();
-	bzero_test();
-	memcpy_test();
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		((char *)dest)[i] = ((char *)src)[i];
+		++i;
+	}
+	return (dest);
 }
+
+/*
+fonction : memcpy
+output : poineur sur dest
+goal : copie n octet de src dans dest
+process :
+	->	copier src dans dest
+	->	retourner dest
+*/
