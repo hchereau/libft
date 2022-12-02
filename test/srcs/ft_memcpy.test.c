@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 14:12:12 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/28 21:15:31 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/30 21:41:03 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	check_create_array(const void *src, size_t size,const int n)
 }	
 void	memcpy_test(void)
 {
-	printf("MEMCPY_TEST\n\n");
+	printf("\nMEMCPY_TEST\n\n");
 	unsigned int src1[] = {1, 5, 3};                                                 
 	unsigned int src2[] = {1300};                                                
 	unsigned int src3[] = {0};                                                   

@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:22:33 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/29 19:52:37 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/02 01:03:21 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ void	bzero_test(void);
 void	memcpy_test(void);
 void	memmove_test(void);
 void	strlcpy_test(void);
+void	strlcat_test(void);
+void	toupper_test(void);
+void	tolower_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);

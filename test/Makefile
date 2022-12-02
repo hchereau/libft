@@ -17,6 +17,9 @@ SRCS += ft_bzero.test.c
 SRCS += ft_memcpy.test.c
 SRCS += ft_memmove.test.c
 SRCS += ft_strlcpy.test.c
+SRCS += ft_strlcat.test.c
+SRCS += ft_toupper.test.c
+SRCS += ft_tolower.test.c
 SRCS += utils.test.c
 
 vpath %.c $(PATH_SRCS)
@@ -50,11 +53,11 @@ CFLAGS += -fPIE
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	$(CC) $(CFLAGS) $^ $(LIB) $(MAIN_SRCS) -o $@ $(INCLUDES) $(TEST_INCLUDES)
+	$(CC) $(CFLAGS) $^ $(LIB) $(MAIN_SRCS) -lbsd -o $@ $(INCLUDES) $(TEST_INCLUDES)
 
 ${OBJS}: $(PATH_OBJS)/%.o: %.c
 	mkdir -p $(PATH_OBJS)
-	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES) $(TEST_INCLUDES)
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES) $(TEST_INCLUDES) 
 
 clean:
 	$(RM) -R $(PATH_OBJS)

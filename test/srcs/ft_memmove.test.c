@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 14:12:12 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/28 21:22:46 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/11/30 21:40:50 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	check_overlap_array(const void *src, size_t size, const int n)
 
 void	memmove_test(void)
 {
-	printf("MEMMOVE_TEST\n\n");
+	printf("\nMEMMOVE_TEST\n\n");
 	unsigned char src[] = "salut";
 	unsigned char src02[] = "salut hey";
 	unsigned int src1[] = {1, 5, 3};                                                 

@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.test.c                                    :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 18:22:40 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/30 21:40:24 by hchereau         ###   ########.fr       */
+/*   Created: 2022/11/30 21:20:16 by hchereau          #+#    #+#             */
+/*   Updated: 2022/11/30 23:22:10 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-
-static	void	check_create_array(size_t size, size_t n)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	void	*array1[1000];
-	void	*array2[1000];
+	size_t size_dst;
 
-	ft_bzero(array1, size);
-	bzero(array2, size);
-	check_array_eq(array1, array2, n);
+	size_dst = ft_strlen(dst);
+	ft_memcpy(dst + size_dst, src, size); 
+	return (size_dst + ft_strlen(src));
 }
 
-void	bzero_test(void)
-{
-	printf("\nBZERO_TEST:\n\n");
-	check_create_array(5, 1);	
-	check_create_array(500, 2);
-	check_create_array(0, 3);
-	check_create_array(25, 4);
-
-
-	
-}
+/*
+strlcat
+goal : concatenner src dans dst 
+return len de dst +src
+process:
+	-> se rendre a la fin de dest
+	-> copier src dans dest
+	-> return ft_strlen(src + dst)
+*/

@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.test.c                                    :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 18:22:40 by hchereau          #+#    #+#             */
-/*   Updated: 2022/11/30 21:40:24 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/02 00:46:38 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/02 00:56:33 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-
-static	void	check_create_array(size_t size, size_t n)
+int ft_toupper(int c)
 {
-	void	*array1[1000];
-	void	*array2[1000];
-
-	ft_bzero(array1, size);
-	bzero(array2, size);
-	check_array_eq(array1, array2, n);
+	if (c >= 'a' && c <= 'z')
+		return (c - DIFF_LOWER_UPPER);
+	else
+		return (c);
 }
+/*
+toupper
+process
+	-> verifier si le int est minuscule
+	-> return la lettre majuscule
 
-void	bzero_test(void)
-{
-	printf("\nBZERO_TEST:\n\n");
-	check_create_array(5, 1);	
-	check_create_array(500, 2);
-	check_create_array(0, 3);
-	check_create_array(25, 4);
-
-
-	
-}
+*/
