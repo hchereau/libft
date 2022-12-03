@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:22:33 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/02 01:03:21 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/03 17:56:57 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,14 @@ void	strlcpy_test(void);
 void	strlcat_test(void);
 void	toupper_test(void);
 void	tolower_test(void);
+void	strchr_test(void);
+void	strrchr_test(void);
+void	strncmp_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);
 void	check_int_sign_eq(const int a, const int b, const size_t n);
 void	check_array_eq(const void *ar1, const void *ar2, const size_t n);
+void	check_char_eq(const char *a, const char *b, const size_t n);
 
 #endif

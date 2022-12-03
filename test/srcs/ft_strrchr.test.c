@@ -1,34 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/03 18:22:13 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/02 14:58:25 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/03 14:50:50 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-int	main(void)
+void	strrchr_test(void)
 {
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();	
-	isascii_test();
-	isprint_test();
-	strlen_test();
-	memset_test();
-	bzero_test();
-	memcpy_test();
-	memmove_test();
-	strlcpy_test();
-	strlcat_test();
-	toupper_test();
-	tolower_test();
-	strchr_test();
-	strrchr_test();
-	strncmp_test();
+	printf("\nSTRRCHR_TEST\n\n");
+	check_char_eq(ft_strrchr("", 'a'), strrchr("", 'a'), 1);
+	check_char_eq(ft_strrchr("salut", 'a'), strrchr("salut", 'a'), 2);
+	check_char_eq(ft_strrchr("salut", 't'), strrchr("salut", 't'), 3);		
+	check_char_eq(ft_strrchr("salut", 'w'), strrchr("salut", 'w'), 4);		
 }

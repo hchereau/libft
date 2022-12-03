@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/03 18:22:13 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/02 16:17:51 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/02 17:06:23 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-int	main(void)
+char	*ft_strchr(const char *s,int c)
 {
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();	
-	isascii_test();
-	isprint_test();
-	strlen_test();
-	memset_test();
-	bzero_test();
-	memcpy_test();
-	memmove_test();
-	strlcpy_test();
-	strlcat_test();
-	toupper_test();
-	tolower_test();
-	strchr_test();
-	strrchr_test();
-	strncmp_test();
+	c = (char)c;
+	
+	while(*s != c && *s != '\0')
+		++s;
+	if (*s == c)
+		return ((char *)s);
+	return (NULL);
 }
+
+/*
+Process:
+	-> parcourir s jusqu'a trouver une occurence
+	-> return l'occurence
+*/

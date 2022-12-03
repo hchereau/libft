@@ -20,6 +20,9 @@ SRCS += ft_strlcpy.test.c
 SRCS += ft_strlcat.test.c
 SRCS += ft_toupper.test.c
 SRCS += ft_tolower.test.c
+SRCS += ft_strchr.test.c
+SRCS += ft_strrchr.test.c
+SRCS += ft_strncmp.test.c
 SRCS += utils.test.c
 
 vpath %.c $(PATH_SRCS)

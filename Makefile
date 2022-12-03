@@ -16,6 +16,9 @@ SRCS += ft_strlcpy.c
 SRCS += ft_strlcat.c
 SRCS += ft_toupper.c
 SRCS += ft_tolower.c
+SRCS += ft_strchr.c
+SRCS += ft_strrchr.c
+SRCS += ft_strncmp.c
 
 ### OBJS
 
@@ -34,7 +37,7 @@ CC = clang
 CFLAGS += -Werror
 CFLAGS += -Wextra
 CFLAGS += -Wall
-CFLAGS += -I -lbsd
+#CFLAGS += -lbsd
 
 ifeq (${debug}, true)
 	CFLAGS += -fsanitize=address,undefined -g3

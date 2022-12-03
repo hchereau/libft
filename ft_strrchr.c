@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/03 18:22:13 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/02 16:17:51 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/03 17:01:16 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-int	main(void)
+char	*ft_strrchr(const char *s,int c)
 {
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();	
-	isascii_test();
-	isprint_test();
-	strlen_test();
-	memset_test();
-	bzero_test();
-	memcpy_test();
-	memmove_test();
-	strlcpy_test();
-	strlcat_test();
-	toupper_test();
-	tolower_test();
-	strchr_test();
-	strrchr_test();
-	strncmp_test();
+	char	*last_occu;
+
+	c = (unsigned char)c;
+	last_occu = NULL;
+	while(*s != '\0')
+	{
+		if (*s == c)
+			last_occu = (char *)s;
+		++s;
+	}
+	if (c == '\0')
+		last_occu = (char *)s;
+	return (last_occu);
 }
+
+/*
+Process:
+	-> parcourir s jusqu'a trouver une occurence
+	-> sioccurence il y a mettre l'occurence dans une variable 
+	-> return l'occurence
+*/
