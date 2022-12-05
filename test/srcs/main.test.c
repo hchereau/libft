@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/04 13:50:21 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/04 23:15:17 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,5 @@ int	main(void)
 	strrchr_test();
 	strncmp_test();
 	memchr_test();
+	memcmp_test();
 }

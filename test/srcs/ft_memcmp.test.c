@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 13:54:15 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/04 18:40:44 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/04 22:23:38 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/05 01:27:52 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.test.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	memcmp_test(void)
 {
-	size_t	i;
-	char	*str;
-	
-	str = (char *)s;
-	i = 0;
-	while (i < n)
-	{
-		if (((int)str[i]) == c)
-			return ((void *)(s + i));
-		++i;
-	}
-	return (NULL);
+	printf("\nMEMCMP_TEST\n\n");
+	check_int_sign_eq(ft_memcmp("salut", "salut", 3), memcmp("salut", "salut", 3), 1);
+	check_int_sign_eq(ft_memcmp("salut", "sulut", 4), memcmp("salut", "sulut", 3), 2);
+	check_int_sign_eq(ft_memcmp("salut", "sulut", 0), memcmp("salut", "sulut", 0), 3);
+	check_int_sign_eq(ft_memcmp("00", "000", 3), memcmp("00", "000", 3), 4);
 }
 
-/*
-process:
-	-> parcours la liste a la recherche de l'octet
-	-> renvoie l'octet 
-*/

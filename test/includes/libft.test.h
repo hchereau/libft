@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:22:33 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/04 13:51:39 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/04 23:50:58 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	strchr_test(void);
 void	strrchr_test(void);
 void	strncmp_test(void);
 void	memchr_test(void);
+void	memcmp_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);

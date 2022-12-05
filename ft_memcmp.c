@@ -1,35 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 13:54:15 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/04 18:40:44 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/05 00:15:49 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/05 01:19:22 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
-	char	*str;
-	
-	str = (char *)s;
-	i = 0;
-	while (i < n)
+	char	*comp1;
+	char	*comp2;
+
+	comp1 = (char *)s1;
+	comp2 = (char *)s2;
+	if (n != 0)
 	{
-		if (((int)str[i]) == c)
-			return ((void *)(s + i));
-		++i;
+		i = 0;
+		while (i < n)
+		{
+			if (comp1[i] != comp2[i])
+				return (comp1[i] - comp2[i]);
+			++i;
+		}
 	}
-	return (NULL);
+	return (0);
 }
 
 /*
 process:
-	-> parcours la liste a la recherche de l'octet
-	-> renvoie l'octet 
-*/
+-> verifier si n = 0;
+-> parcourir les 2 chaines pour voir une difference 
+-> return negatif ou positf
+ */
