@@ -16,7 +16,7 @@ void	memchr_test(void)
 {
 	printf("\nMEMCHR_TEST\n\n");
 	char	array1[] = "salut";
-	check_array_eq(ft_memchr(array1, 'c', 4),memchr(array1, 'c', 4), 1);
-	check_array_eq(ft_memchr(array1, 'a', 3),memchr(array1, 'a', 3), 2);
-	check_array_eq(ft_memchr(array1, 't', 5),memchr(array1, 't', 5), 3);
+	check_ptr_eq(ft_memchr(array1, 'c', 4),memchr(array1, 'c', 4), 1);
+	check_ptr_eq(ft_memchr(array1, 'a', 3),memchr(array1, 'a', 3), 2);
+	check_ptr_eq(ft_memchr(array1, 't', 5),memchr(array1, 't', 5), 3);
 }

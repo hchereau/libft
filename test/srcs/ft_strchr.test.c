@@ -15,8 +15,8 @@
 void	strchr_test(void)
 {
 	printf("\nSTRCHR_TEST\n\n");
-	check_char_eq(ft_strchr("", 'a'), strchr("", 'a'), 1);
-	check_char_eq(ft_strchr("salut", 'a'), strchr("salut", 'a'), 2);
-	check_char_eq(ft_strchr("salut", 't'), strchr("salut", 't'), 3);		
-	check_char_eq(ft_strchr("salut", 'w'), strchr("salut", 'w'), 4);		
+	check_ptr_eq(ft_strchr("", 'a'), strchr("", 'a'), 1);
+	check_ptr_eq(ft_strchr("salut", 'a'), strchr("salut", 'a'), 2);
+	check_ptr_eq(ft_strchr("salut", 't'), strchr("salut", 't'), 3);		
+	check_ptr_eq(ft_strchr("salut", 'w'), strchr("salut", 'w'), 4);		
 }

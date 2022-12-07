@@ -25,6 +25,7 @@ SRCS += ft_strrchr.test.c
 SRCS += ft_strncmp.test.c
 SRCS += ft_memchr.test.c
 SRCS += ft_memcmp.test.c
+SRCS += ft_substr.test.c
 SRCS += utils.test.c
 
 vpath %.c $(PATH_SRCS)
@@ -54,6 +55,7 @@ CFLAGS += -Werror
 CFLAGS += -Wextra
 CFLAGS += -Wall
 CFLAGS += -fPIE
+#CFLAGS += -fsanitize=address,undefined -g3
 
 all: ${NAME}
 

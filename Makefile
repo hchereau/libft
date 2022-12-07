@@ -21,6 +21,7 @@ SRCS += ft_strrchr.c
 SRCS += ft_strncmp.c
 SRCS += ft_memchr.c
 SRCS += ft_memcmp.c
+SRCS += ft_substr.c
 
 ### OBJS
 

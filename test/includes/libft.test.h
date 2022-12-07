@@ -42,11 +42,13 @@ void	strrchr_test(void);
 void	strncmp_test(void);
 void	memchr_test(void);
 void	memcmp_test(void);
+void	substr_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);
 void	check_int_sign_eq(const int a, const int b, const size_t n);
 void	check_array_eq(const void *ar1, const void *ar2, const size_t n);
-void	check_char_eq(const char *a, const char *b, const size_t n);
+void	check_ptr_eq(const void *a, const void *b, const size_t n);
+void	check_string_eq(const char *a, const char *b, const size_t n);
 
 #endif

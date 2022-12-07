@@ -28,19 +28,33 @@ void	check_int_sign_eq(const int a, const int b, const size_t n)
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
 }
 
-void	check_char_eq(const char *a, const char *b, const size_t n)
+void	check_ptr_eq(const void *a, const void *b, const size_t n)
 {
 	if (a == b)
 		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
 	else
+	{
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%p] : (expected) [%p] \n", a, b);
+	}
 }
 void	check_array_eq(const void *ar1, const void *ar2, const size_t n)
 {
-	if (!ar1 && !ar2) 
+	if (ar1 == NULL && ar2 == NULL) 
 		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
-	else if (memcmp(ar1, ar2, n) == 0)	
+	else if (ar1 != NULL && ar2 != NULL && memcmp(ar1, ar2, n) == 0)	
 		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
 	else	
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
+}
+
+void	check_string_eq(const char *a, const char *b, const size_t n)
+{
+	if (strcmp(a, b) == 0)
+		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
+	else
+	{
+		printf("%zu : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%s] : (expected) [%s] \n", a, b);			
+	}
 }
