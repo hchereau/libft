@@ -34,4 +34,5 @@ int	main(void)
 	memchr_test();
 	memcmp_test();
 	substr_test();
+	strjoin_test();
 }
