@@ -2,7 +2,7 @@
 
 void substr_test(void)
 {
-	printf("\n\nSUBSTR_TEST\n");
+	printf("\nSUBSTR_TEST\n\n");
 	check_string_eq(ft_substr("salut", 3, 2), "ut", 1);
 	check_string_eq(ft_substr("salut", 2, 6), "lut", 2);
 	check_string_eq(ft_substr("salut", 0, 0), "", 3);
