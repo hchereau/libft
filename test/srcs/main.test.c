@@ -35,4 +35,5 @@ int	main(void)
 	memcmp_test();
 	substr_test();
 	strjoin_test();
+	strtrim_test();
 }

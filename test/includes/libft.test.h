@@ -44,6 +44,7 @@ void	memchr_test(void);
 void	memcmp_test(void);
 void	substr_test(void);
 void	strjoin_test(void);
+void	strtrim_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);
