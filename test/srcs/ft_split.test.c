@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.test.c                                     :+:      :+:    :+:   */
+/*   ft_split.test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 16:19:51 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/09 20:18:12 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/09 22:47:57 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/10 00:17:02 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-void atoi_test(void)
+void	split_test(void)
 {
-	printf("\nATOI_TEST\n\n");
-	check_int_eq(ft_atoi("+42"), atoi("+42"), 1);
-	check_int_eq(ft_atoi("42"), atoi("42"), 2);
-	check_int_eq(ft_atoi("-42"), atoi("-42"), 3);	
-	check_int_eq(ft_atoi("++++-42"), atoi("++++-42"), 4);
-	check_int_eq(ft_atoi("--42"), atoi("--42"), 5);
-	check_int_eq(ft_atoi("i42i"), atoi("i42i"), 6);
-	check_int_eq(ft_atoi("		42i"), atoi("		42i"), 7);
+	check_string_string_eq(ft_split("salut&ca&va", '&'), "salut" "ca" "va")
 }

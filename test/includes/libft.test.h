@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:22:33 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/09 15:05:48 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/10 00:24:34 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ void	substr_test(void);
 void	strjoin_test(void);
 void	strtrim_test(void);
 void	strnstr_test(void);
-void	atoi_test(void);
+void	split_test(void);
+//void	atoi_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);
@@ -54,5 +55,6 @@ void	check_int_sign_eq(const int a, const int b, const size_t n);
 void	check_array_eq(const void *ar1, const void *ar2, const size_t n);
 void	check_ptr_eq(const void *a, const void *b, const size_t n);
 void	check_string_eq(const char *a, const char *b, const size_t n);
+void	check_string_string_eq(const char **a, const char **b, const size_t n);
 
 #endif

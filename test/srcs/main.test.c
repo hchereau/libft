@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/09 15:05:07 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/10 00:25:37 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int	main(void)
 	strjoin_test();
 	strtrim_test();
 	strnstr_test();
-	atoi_test();
+	split_test();
+//	atoi_test();
 }

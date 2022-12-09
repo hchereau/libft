@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:20:33 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/09 15:22:46 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/10 00:22:59 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,26 @@ void	check_string_eq(const char *a, const char *b, const size_t n)
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
 		printf("(mine) [%s] : (expected) [%s] \n", a, b);			
 	}
+
+void	check_string_string_eq(const char **a, const char **b, const size_t n)
+{
+	size_t i;
+
+	i = 0;
+	while (*a[i] != NULL && *b[i] != NULL)
+	{
+		if (strcmp(*a[i], *b[i]) != 0)
+		{	
+			printf("%zu : %sKO%s\n", n, RED, WHITE);
+			printf("(mine) [%s] : (expected) [%s] \n", a, b);
+			return (0);			
+		}
+		if ((*a[i + 1] == NULL && *b[i + 1] != NULL) || (*a[i + 1] != NULL && *b[i + 1] == NULL))
+		{	
+			printf("%zu : %sKO%s\n", n, RED, WHITE);
+			return (0);			
+		}
+	}	
+	printf("%zu : %sOK%s\n", n, GREEN, WHITE);
+	return (0);
 }
