@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/05 16:50:13 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/05 13:58:58 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/05 15:46:23 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-int	main(void)
+void	strnstr_test(void)
 {
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();	
-	isascii_test();
-	isprint_test();
-	strlen_test();
-	memset_test();
-	bzero_test();
-	memcpy_test();
-	memmove_test();
-	strlcpy_test();
-	strlcat_test();
-	toupper_test();
-	tolower_test();
-	strchr_test();
-	strrchr_test();
-	strncmp_test();
-	memchr_test();
-	memcmp_test();
-	strnstr_test();
-	atoi_test();
+	printf("\nSTRNSTR_TEST\n\n");
+	check_char_eq(ft_strnstr("salut", "", 4), strnstr("salut", "", 4), 1);
+	check_char_eq(ft_strnstr("salut", "alu", 5), strnstr("salut", "alu", 5), 2);
+	check_char_eq(ft_strnstr("salut", "avion", 4), strnstr("salut", "avion", 4), 3);
 }

@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/26 12:25:58 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/05 16:50:13 by hchereau         ###   ########.fr       */
+/*   Created: 2022/12/05 16:19:51 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/05 22:31:21 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-int	main(void)
+void atoi_test(void)
 {
-	isalpha_test();
-	isdigit_test();
-	isalnum_test();	
-	isascii_test();
-	isprint_test();
-	strlen_test();
-	memset_test();
-	bzero_test();
-	memcpy_test();
-	memmove_test();
-	strlcpy_test();
-	strlcat_test();
-	toupper_test();
-	tolower_test();
-	strchr_test();
-	strrchr_test();
-	strncmp_test();
-	memchr_test();
-	memcmp_test();
-	strnstr_test();
-	atoi_test();
+	printf("\nATOI_TEST\n\n");
+//	check_int_eq(ft_atoi("+42"), atoi("+42"), 1);
+	check_int_eq(ft_atoi("42"), atoi("42"), 2);
+	printf("%d", ft_atoi("42"));
+//	check_int_eq(ft_atoi("-42"), atoi("-42"), 3);	
+//	check_int_eq(ft_atoi("+++-42"), atoi("+++-42"), 4);
+//	check_int_eq(ft_atoi("--42"), atoi("--42"), 5);
+//	check_int_eq(ft_atoi("i42i"), atoi("i42i"), 6);
+//	check_int_eq(ft_atoi("		42i"), atoi("		42i"), 7);
 }
+
+
