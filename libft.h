@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 11:25:53 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/05 00:15:28 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/09 15:03:45 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strnstr(const char *big, const char *little,  size_t len);
+int		ft_atoi(const char *nptr);
 #endif

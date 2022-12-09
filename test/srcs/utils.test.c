@@ -6,7 +6,7 @@
 /*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 12:20:33 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/04 18:36:03 by hchereau         ###   ########.fr       */
+/*   Updated: 2022/12/09 15:22:46 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ void	check_int_eq(const int a, const int b, const size_t n)
 	if (a == b)
 		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
 	else
+	{
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%d] : (expected) [%d] \n", a, b);
+	}
 }
 
 void	check_int_sign_eq(const int a, const int b, const size_t n)
@@ -25,7 +28,10 @@ void	check_int_sign_eq(const int a, const int b, const size_t n)
 	if ((a > 0 && b > 0) || (a == 0 && b == 0) || (a < 0 && b < 0))
 		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
 	else
+	{
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%d] : (expected) [%d] \n", a, b);
+	}
 }
 
 void	check_ptr_eq(const void *a, const void *b, const size_t n)
@@ -44,8 +50,11 @@ void	check_array_eq(const void *ar1, const void *ar2, const size_t n)
 		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
 	else if (ar1 != NULL && ar2 != NULL && memcmp(ar1, ar2, n) == 0)	
 		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
-	else	
+	else
+	{	
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%p] : (expected) [%p] \n", ar1, ar2);
+	}
 }
 
 void	check_string_eq(const char *a, const char *b, const size_t n)
