@@ -1,62 +1,59 @@
 #include "libft.h"
 
-static	int	size_trim(const char *s1, const char *set)
+size_t	start_string_trim(const char *s1, const char *set)
 {
-	size_t i;
-	size_t size;
-	
-	i = 0;
-	size = 0;
-	while (i < ft_strlen(s1))
+	size_t	size_start;
+
+	size_start = 0;
+	if (set != NULL)
 	{
-		if (!is_char_valid(s1[i], set))
-			++size;
-		++i;
+		while (s1[size_start] != '\0' && (ft_strchr(set, s1[size_start]) != NULL))
+			++size_start;
 	}
-	return (size);
+	return (size_start);
 }
 
-static bool is_char_valid(const char car, const char *set)
+size_t len_string_trim(const char *s1, const char *set)
 {
-	size_t	i:
-	bool	valid;
-	
-	i = 0;
-	valid = true;
-	while (i < ft_strlen(set))
+	size_t	len;
+
+	len = ft_strlen(s1);
+	if (set != NULL)
 	{
-		if (car == set[i])
-			valid = false;
-		++i;
+		while (len > 0 && (ft_strchr(set, s1[len - 1]) != NULL))
+			--len;
 	}
-	return (valid);
+	return (len);
 }
 
-
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	char *trim;
-	size_t i;
+	char	*trim;
+	size_t	start;
+	size_t	len;
 
-	i = 0;
-	trim = (char *)malloc(size_trim(s1, set) * sizeof(char));
-	if (trim != NULL)
+	trim = NULL;
+	if (s1 != NULL)
 	{
-		while (i < ft_strlen(s1))
-		{
-			if (is_char_valid(s1[i], set))
-				trim = s1[i];
-			++i;
-		}
+		start = start_string_trim(s1, set);
+		len = len_string_trim(s1 + start, set);
+		trim = ft_substr(s1 + start, 0, len);
 	}
 	return (trim);
 }
 
-					/*
-process:
--> malloc trim;
--> parcours la chaine set
--> cherche un caractere de set dans s1
--> substr  
+/*
+   process
+   -> alloue malloc trim
+   -> verifier si trim est pas null
+   -> verifier tout les caractere au debut
+   -> verifier tous les caractere a la fin
+   -> reecrire s1 dans trim
+   -> return trim
+ */
 
-					 */
+/*
+   start_string_trim
+process:
+->
+ */
