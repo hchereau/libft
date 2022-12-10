@@ -66,8 +66,8 @@ void	check_string_eq(const char *a, const char *b, const size_t n)
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
 		printf("(mine) [%s] : (expected) [%s] \n", a, b);			
 	}
-
-void	check_string_array_eq(const char **a, const char **b, const size_t n)
+}
+void	check_string_array_eq(char **a, char **b, const size_t n)
 {
 	size_t i;
 
@@ -75,7 +75,10 @@ void	check_string_array_eq(const char **a, const char **b, const size_t n)
 	while (a[i] != NULL && b[i] != NULL && strcmp(a[i], b[i]) == 0)
 		++i;
 	if (a[i] == NULL && b[i] == NULL)
-		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
+		printf("%zu : %sOK%s\n", n, GREEN, WHITE);			
 	else
+	{
 		printf("%zu : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%s, %s, %s] : (expected) [%s, %s, %s] \n", a[0], a[1], b[2], b[0], b[1], b[2]);			
+	}
 }

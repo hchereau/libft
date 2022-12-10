@@ -12,71 +12,90 @@
 
 #include "libft.h"
 
-static size_t get_next_sep(char *s, c)
+static size_t get_word_len(const char *s, char c)
 {
-	
+	size_t word_len;
+
+	word_len = 0;
+	while (s[word_len] != '\0' && s[word_len] != c)
+		++word_len;
+	return (word_len);
 }
-static char *get_next_words(char **s,char c)
+
+static char	*get_next_words(const char **s,char c)
 {
-	size_t	i;
-	size_t	start;
+	size_t	word_len;
 	char	*word;
-	
-	i = 0;
-	while (i < ft_strlen(s))
-	{
-		if(s[i] != c)
-		{
-			start = i;
-			i = get_next_sep(s + start, c);
-			word = (char *)
-			ft_strlcpy(word, s + start, i - start);
-			break;
-		}
-	}
+
+	while(**s == c)
+		++(*s);
+	word_len = get_word_len(*s, c);
+	word = (char *)malloc((word_len + 1) * sizeof(char));
+	if (word != NULL)
+		ft_strlcpy(word, *s, word_len + 1);
+	*s += word_len;
 	return (word);
 }
 
-static size_t	get_size(const char *s,char c)
+static size_t	count_words(const char *s,char c)
 {
-	size_t	i;
 	size_t	size_split;
-	bool	is_sep;
-	
-	
-	i = 0;
-	size_split = 1;
-	is_sep = false;
-	while (i < ft_strlen(s))
+	bool	is_word;
+
+	size_split = 0;
+	is_word = false;
+	while (*s != '\0')
 	{
-		if (s[i] == c && is_sep == false)
+		if (*s == c && is_word == true)
 		{
 			++size_split;
-			is_sep = true;
+			is_word = false;
 		}
-		else if( s[i] != c) 
-			is_sep = false;
-		++i;
+		else 
+			is_word = true;
+		++s;
 	}
-	return (size_split);
+	return (size_split + (is_word == true));
+}
+
+static void	free_strs(char **strs)
+{
+	size_t	incre;
+
+	incre = 0;
+	while (strs[incre] != NULL)
+	{
+		free(strs[incre]);
+		++incre;
+	}
+	free(strs);
 }
 
 char	**ft_split(const char *s, char c)
 {
-	const size_t	size_split = get_size(s, c);
-	size_t			i;
-	char			**split;
+	size_t	size_split;
+	size_t	i;
+	char	**split;
 
+	if (s == NULL)
+		return (NULL);
+	size_split = count_words(s, c);
 	split = (char **)malloc((size_split + 1) * sizeof(char *));
 	if (split != NULL)
 	{	
 		i = 0;
+		split[size_split] = NULL;
 		while(i < size_split)
 		{
-			split[i] = get_next_word(&s, c);
+			split[i] = get_next_words(&s, c);
+			if (split[i] == NULL)
+			{
+				free_strs(split);
+				split = NULL;
+				break;
+			}
 			++i;
 		}
-		split[i] = NULL;
 	}
 	return (split); 
 }

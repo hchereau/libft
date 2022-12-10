@@ -38,5 +38,6 @@ int	main(void)
 	strtrim_test();
 	strnstr_test();
 	split_test();
+	itoa_test();
 //	atoi_test();
 }

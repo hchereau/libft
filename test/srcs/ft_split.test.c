@@ -14,5 +14,26 @@
 
 void	split_test(void)
 {
-	check_string_string_eq(ft_split("salut&ca&va", '&'), "salut" "ca" "va")
+	char **ptr;
+	int n = 4;
+
+ 	ptr = (char**)malloc(sizeof(char*) * n);
+
+ 	for (int i = 0; i < n; i++) 
+	{
+    	ptr[i] = (char*)malloc(sizeof(char) * 6);
+  	}
+	strcpy(ptr[0], "salut");
+	strcpy(ptr[1], "ca");
+	strcpy(ptr[2], "va");
+	ptr[3] = NULL;
+
+	printf("\nSPLIT_TEST\n\n");
+	check_string_array_eq(ft_split("salut&ca&va", '&'), ptr, 1);
+	check_string_array_eq(ft_split("&&&&&&&&&&&salut&ca&va", '&'), ptr, 2);
+	check_string_array_eq(ft_split("salut&ca&va", '&'), ptr, 3);
+//	check_string_array_eq(ft_split(NULL, '&'), ptr, 4);
+//	check_string_array_eq(ft_split("salut&ca&va", '\0'), ptr, 1);
+
+	
 }

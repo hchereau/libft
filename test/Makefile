@@ -30,6 +30,7 @@ SRCS += ft_strjoin.test.c
 SRCS += ft_strtrim.test.c
 SRCS += ft_strnstr.test.c
 SRCS += ft_split.test.c
+SRCS += ft_itoa.test.c
 #SRCS += ft_atoi.test.c
 SRCS += utils.test.c
 
