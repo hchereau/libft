@@ -39,5 +39,5 @@ int	main(void)
 	strnstr_test();
 	split_test();
 	itoa_test();
-//	atoi_test();
+	atoi_test();
 }

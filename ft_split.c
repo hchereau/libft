@@ -46,10 +46,13 @@ static size_t	count_words(const char *s,char c)
 	is_word = false;
 	while (*s != '\0')
 	{
-		if (*s == c && is_word == true)
+		if (*s == c)
 		{
-			++size_split;
-			is_word = false;
+			if (is_word == true)
+			{
+				++size_split;
+				is_word = false;
+			}
 		}
 		else 
 			is_word = true;

@@ -48,7 +48,7 @@ void	strtrim_test(void);
 void	strnstr_test(void);
 void	split_test(void);
 void	itoa_test(void);
-//void	atoi_test(void);
+void	atoi_test(void);
 // utils
 
 void	check_int_eq(const int a, const int b, const size_t n);
