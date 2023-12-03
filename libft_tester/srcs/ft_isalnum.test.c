@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/03 18:45:59 by imback            #+#    #+#             */
-/*   Updated: 2023/12/03 19:01:01 by imback           ###   ########.fr       */
+/*   Created: 2023/12/03 19:12:21 by imback            #+#    #+#             */
+/*   Updated: 2023/12/03 19:27:00 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.test.h"
 
-int	ft_isdigit(int c)
+void	ft_isalnum_test(void)
 {
-	return (c >= '0' && c <= '9');
+	printf("\nISALNUM_TEST\n\n");
+	check_sign_eq(ft_isdigit('1'), isdigit('1'), 1);
+	check_sign_eq(ft_isdigit(1), isdigit(1), 2);
+	check_sign_eq(ft_isdigit('!'), isdigit('!'), 3);
+	check_sign_eq(ft_isdigit('A'), isdigit('A'), 4);
+	check_sign_eq(ft_isdigit('z'), isdigit('z'), 5);
 }

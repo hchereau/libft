@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:01:37 by imback            #+#    #+#             */
-/*   Updated: 2023/12/03 17:33:26 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/03 19:28:01 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,6 @@
 int	main(void)
 {
 	ft_isalpha_test();
+	ft_isdigit_test();
+	ft_isalnum_test();
 }

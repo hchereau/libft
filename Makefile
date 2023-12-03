@@ -5,6 +5,8 @@ NAME = libft.a
 PATH_SRCS = srcs/
 
 SRCS += ft_isalpha.c
+SRCS += ft_isdigit.c
+SRCS += ft_isalnum.c
 
 vpath %.c $(PATH_SRCS)
 
@@ -43,11 +45,11 @@ RUN_TESTS = $(TEST_FOLDER)/run_test
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(AR) $@ $<
+		$(AR) $@ $^
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c
 		mkdir -p $(PATH_OBJS)
-		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+		$(CC) $(CFLAGS) -c $^ -o $@ $(INCLUDES)
 
 test: $(NAME)
 		$(MAKE) -sC $(TEST_FOLDER)
@@ -57,9 +59,11 @@ test: $(NAME)
 
 clean:
 		$(RM) -r $(PATH_OBJS)
+		$(MAKE) -C $(TEST_FOLDER) clean
 
 fclean: clean
 		$(RM) $(NAME)
+		$(MAKE) -C $(TEST_FOLDER) fclean
 
 re: fclean
 		$(MAKE)

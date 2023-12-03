@@ -4,10 +4,11 @@ NAME = run_test
 
 PATH_SRCS = srcs/
 
-MAIN_SRCS += $(PATH_SRCS)/main.test.c
-
+SRCS += main.test.c
 SRCS += utils.test.c
 SRCS += ft_isalpha.test.c
+SRCS += ft_isdigit.test.c
+SRCS += ft_isalnum.test.c
 
 vpath %.c $(PATH_SRCS)
 
@@ -54,7 +55,7 @@ CFLAGS += -fPIE
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) $^ $(LIB) $(MAIN_SRCS) -lbsd -o $@ $(INCLUDES)
+		$(CC) $(CFLAGS) $^ $(LIB) -lbsd -o $@ $(INCLUDES)
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c
 		mkdir -p $(PATH_OBJS)
