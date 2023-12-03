@@ -1,10 +1,12 @@
-NAME = run_tes
+NAME = run_test
 
 ### SRCS
 
 PATH_SRCS = srcs/
 
-SRCS += main.c
+MAIN_SRCS += $(PATH_SRCS)/main.test.c
+
+SRCS += utils.test.c
 SRCS += ft_isalpha.test.c
 
 vpath %.c $(PATH_SRCS)
@@ -16,8 +18,8 @@ INCLUDES_LIBFT_TEST += includes/
 INCLUDES += -I $(INCLUDES_LIBFT_TEST)
 INCLUDES += -I $(INCLUDES_LIBFT)
 
-HEADERS += $(INCLUDES_LIBFT_TEST)/libft.test.h
 HEADERS += $(INCLUDES_LIBFT)/libft.h
+HEADERS += $(INCLUDES_LIBFT_TEST)/libft.test.h
 
 ### OBJS
 
@@ -27,10 +29,16 @@ OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
 
 ### OBJS_TEST
 
-PATH_OBJS_TEST = ../objs/
+# PATH_OBJS_TEST = ../objs/
 
-OBJS_TEST = $(wildcard $(PATH_OBJS_TEST)/*.o)
-OBJS_TEST := $(filter-out $(PATH_OBJS_TEST)/main.o, $(OBJS_TEST))
+# OBJS_TEST = $(wildcard $(PATH_OBJS_TEST)/*.o)
+# OBJS_TEST := $(filter-out $(PATH_OBJS_TEST)/main.o, $(OBJS_TEST))
+
+### LIB
+
+PATH_LIB = -L../
+
+LIB = ../libft.a
 
 ### COMPILATION
 
@@ -39,15 +47,16 @@ CC = clang
 CFLAGS += -Werror
 CFLAGS += -Wextra
 CFLAGS += -Wall
+CFLAGS += -fPIE
 
 ### RULE
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) $< $(OBJS_TEST) -o $@
+		$(CC) $(CFLAGS) $^ $(LIB) $(MAIN_SRCS) -lbsd -o $@ $(INCLUDES)
 
-$(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADERS)
+$(OBJS): $(PATH_OBJS)/%.o: %.c
 		mkdir -p $(PATH_OBJS)
 		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 

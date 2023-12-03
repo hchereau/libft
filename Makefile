@@ -52,7 +52,8 @@ $(OBJS): $(PATH_OBJS)/%.o: %.c
 test: $(NAME)
 		$(MAKE) -sC $(TEST_FOLDER)
 		echo -n "\n<--------TESTS-------->\n\n"
-		valgrind --leak-check=full --show-leak-kinds=all ./$(RUN_TESTS)
+#		valgrind --leak-check=full --show-leak-kinds=all ./$(RUN_TESTS) a faire si prblm leaks
+		./$(RUN_TESTS)
 
 clean:
 		$(RM) -r $(PATH_OBJS)

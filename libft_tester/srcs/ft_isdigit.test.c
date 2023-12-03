@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:10:51 by imback            #+#    #+#             */
-/*   Updated: 2023/12/02 17:31:41 by imback           ###   ########.fr       */
+/*   Created: 2023/12/03 18:26:51 by imback            #+#    #+#             */
+/*   Updated: 2023/12/03 18:39:13 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalpha(int c)
+void	ft_isdigit_test(void)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	printf("\nISDIGIT_TEST\n\n");
+	check_sign_eq(ft_isdigit(1), isdigit(1), 1);
+	check_sign_eq(ft_isdigit('a'), isdigit('a'), 2);
+	check_sign_eq(ft_isdigit('A'), isdigit('A'), 3);
 }
