@@ -7,6 +7,8 @@ PATH_SRCS = srcs/
 SRCS += ft_isalpha.c
 SRCS += ft_isdigit.c
 SRCS += ft_isalnum.c
+SRCS += ft_isascii.c
+SRCS += ft_isprint.c
 
 vpath %.c $(PATH_SRCS)
 

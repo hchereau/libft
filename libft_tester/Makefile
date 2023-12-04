@@ -9,6 +9,8 @@ SRCS += utils.test.c
 SRCS += ft_isalpha.test.c
 SRCS += ft_isdigit.test.c
 SRCS += ft_isalnum.test.c
+SRCS += ft_isascii.test.c
+SRCS += ft_isprint.test.c
 
 vpath %.c $(PATH_SRCS)
 
