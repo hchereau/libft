@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 12:03:26 by imback            #+#    #+#             */
-/*   Updated: 2023/12/03 23:02:44 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/04 11:55:57 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "libft.h"
 # include <stdio.h>
 # include <ctype.h>
+# include <string.h>
 
 # define GREEN "\033[32;1m"
 # define RED "\033[31;1m"
@@ -23,10 +24,14 @@
 
 void	check_int_eq(const int function, const int res, const int n);
 void	check_sign_eq(const int function, const int res, const int n);
+void	check_size_t_eq(const size_t function, const size_t res, const int n);
+void	check_array_eq(const void *ar1, const void *ar2, const int n);
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
 void	ft_isalnum_test(void);
 void	ft_isascii_test(void);
 void	ft_isprint_test(void);
+void	ft_strlen_test(void);
+void	ft_memset_test(void);
 
 #endif

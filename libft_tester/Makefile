@@ -11,6 +11,8 @@ SRCS += ft_isdigit.test.c
 SRCS += ft_isalnum.test.c
 SRCS += ft_isascii.test.c
 SRCS += ft_isprint.test.c
+SRCS += ft_strlen.test.c
+SRCS += ft_memset.test.c
 
 vpath %.c $(PATH_SRCS)
 
