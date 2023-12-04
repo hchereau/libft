@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 11:47:48 by imback            #+#    #+#             */
-/*   Updated: 2023/12/04 11:48:59 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/04 16:58:13 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,9 @@ void	check_array_eq(const void *ar1, const void *ar2, const int n)
 	else if (memcmp(ar1, ar2, n) == 0)
 		printf("%d : %sOK%s\n", n, GREEN, WHITE);
 	else
+	{
 		printf("%d : %sKO%s\n", n, RED, WHITE);
-		printf("(mine) [%d] : (expected) [%d] \n", ar1, ar1);
+		printf("(mine) [%p] : (expected) [%p] \n", ar1, ar1);
+	}
 
 }
