@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 12:03:26 by imback            #+#    #+#             */
-/*   Updated: 2023/12/04 11:55:57 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/05 11:36:33 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,7 @@ void	ft_isascii_test(void);
 void	ft_isprint_test(void);
 void	ft_strlen_test(void);
 void	ft_memset_test(void);
+void	ft_bzero_test(void);
+void	ft_memcpy_test(void);
 
 #endif

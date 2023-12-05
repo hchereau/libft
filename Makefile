@@ -11,6 +11,8 @@ SRCS += ft_isascii.c
 SRCS += ft_isprint.c
 SRCS += ft_strlen.c
 SRCS += ft_memset.c
+SRCS += ft_bzero.c
+SRCS += ft_memcpy.c
 
 vpath %.c $(PATH_SRCS)
 
@@ -72,5 +74,5 @@ fclean: clean
 re: fclean
 		$(MAKE)
 
-.PHONY: all test clean fclean re
+.PHONY:
 .SILENT: test

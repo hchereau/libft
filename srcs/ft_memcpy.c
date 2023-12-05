@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.test.c                                    :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 17:02:05 by imback            #+#    #+#             */
-/*   Updated: 2023/12/05 10:54:54 by imback           ###   ########.fr       */
+/*   Created: 2023/12/05 11:38:45 by imback            #+#    #+#             */
+/*   Updated: 2023/12/05 11:51:57 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-static void	check_create_array(size_t size, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	uint8_t	array1[] = "saluttt";
-	uint8_t	array2[] = "saluttt";
+	size_t	i;
 
-	ft_bzero(array1, size);
-	bzero(array2, size);
-	check_array_eq(array1, array2,(const size_t) n);
-}
-
-void	ft_bzero_test(void)
-{
-	printf("\nBZERO_TEST\n\n");
-	check_create_array(4, 1);
-	check_create_array(20, 2);
-	check_create_array(0, 3);
+	i = 0;
+	while (i < n)
+	{
+		((uint8_t *) dest)[i] = ((uint8_t *) src)[i];
+		++i;
+	}
+	return (dest);
 }
