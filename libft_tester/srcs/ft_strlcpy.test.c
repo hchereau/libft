@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 10:54:36 by imback            #+#    #+#             */
-/*   Updated: 2023/12/06 17:19:45 by imback           ###   ########.fr       */
+/*   Created: 2023/12/06 11:07:09 by imback            #+#    #+#             */
+/*   Updated: 2023/12/06 17:14:33 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.test.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_strlcpy_test(void)
 {
-	size_t	len;
-
-	len = 0;
-	while (s[len] != '\0')
-		++len;
-	return (len);
+	const char	*s1 = "salut";
+	const char	*s2 = ""
 }

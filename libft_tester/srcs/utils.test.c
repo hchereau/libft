@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 11:47:48 by imback            #+#    #+#             */
-/*   Updated: 2023/12/04 16:58:13 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/06 17:00:57 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,33 @@ void	check_array_eq(const void *ar1, const void *ar2, const int n)
 		printf("(mine) [%p] : (expected) [%p] \n", ar1, ar1);
 	}
 
+}
+
+void	check_string_eq(const char *s1, const char *s2, const int n)
+{
+	int			i;
+	int			same;
+	const int	size1 = strlen(s1);
+	const int	size2 = strlen(s2);
+
+	same = 0;
+	if (size1 == size2)
+	{
+		while (i < size1 - 1)
+		{
+			if (s1[i] != s2[i])
+			{
+				++same;
+				break;
+			}
+			++i;
+		}
+	}
+	if (same == 1)
+	{
+		printf("%d : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%s] : (expected) [%s] \n", s1, s2);
+	}
+	else
+		printf("%d : %sOK%s\n", n, GREEN, WHITE);
 }

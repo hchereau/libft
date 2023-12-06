@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:01:37 by imback            #+#    #+#             */
-/*   Updated: 2023/12/05 11:18:45 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/05 18:26:39 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ int	main(void)
 	ft_memset_test();
 	ft_bzero_test();
 	ft_memcpy_test();
+	ft_memmove_test();
 }

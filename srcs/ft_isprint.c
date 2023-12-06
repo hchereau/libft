@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 23:18:25 by imback            #+#    #+#             */
-/*   Updated: 2023/12/05 10:32:24 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/06 17:19:03 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isprint(int c)
 {
-	return(c >= FIRST_PRINTABLE_CHAR && c <= LAST_PRINTABLE_CHAR);
+	return (c >= FIRST_PRINTABLE_CHAR && c <= LAST_PRINTABLE_CHAR);
 }

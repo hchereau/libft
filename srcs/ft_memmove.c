@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/04 10:54:36 by imback            #+#    #+#             */
-/*   Updated: 2023/12/06 17:19:45 by imback           ###   ########.fr       */
+/*   Created: 2023/12/05 18:07:25 by imback            #+#    #+#             */
+/*   Updated: 2023/12/05 19:30:40 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+static void	*reverse_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	len;
+	while (n > 0)
+	{
+		((uint8_t *) dest)[n - 1] = ((uint8_t *) src)[n - 1];
+		--n;
+	}
+	return (dest);
+}
 
-	len = 0;
-	while (s[len] != '\0')
-		++len;
-	return (len);
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	if (dest > src)
+		dest = reverse_memcpy(dest, src, n);
+	else
+		dest = ft_memcpy(dest, src, n);
+	return (dest);
 }
