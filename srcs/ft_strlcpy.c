@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:01:37 by imback            #+#    #+#             */
-/*   Updated: 2023/12/07 23:47:16 by imback           ###   ########.fr       */
+/*   Created: 2023/12/06 17:49:33 by imback            #+#    #+#             */
+/*   Updated: 2023/12/07 17:33:17 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-int	main(void)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	ft_isalpha_test();
-	ft_isdigit_test();
-	ft_isalnum_test();
-	ft_isascii_test();
-	ft_isprint_test();
-	ft_strlen_test();
-	ft_memset_test();
-	ft_bzero_test();
-	ft_memcpy_test();
-	ft_memmove_test();
-	ft_strlcpy_test();
-	ft_strlcat_test();
-	ft_toupper_test();
+	size_t	i;
+
+	if (size > 0)
+	{
+		i = 0;
+		while (i < size - 1 && src[i] != '\0')
+		{
+			dst[i] = src[i];
+			++i;
+		}
+		dst[i] = '\0';
+	}
+	return (ft_strlen(src));
 }

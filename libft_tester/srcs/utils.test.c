@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 11:47:48 by imback            #+#    #+#             */
-/*   Updated: 2023/12/06 17:00:57 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/06 18:23:32 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ void	check_string_eq(const char *s1, const char *s2, const int n)
 	const int	size2 = strlen(s2);
 
 	same = 0;
+	i = 0;
 	if (size1 == size2)
 	{
 		while (i < size1 - 1)

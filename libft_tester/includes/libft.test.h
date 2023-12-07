@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 12:03:26 by imback            #+#    #+#             */
-/*   Updated: 2023/12/06 17:01:26 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/08 00:12:28 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <ctype.h>
 # include <string.h>
+# include <bsd/string.h>
 
 # define GREEN "\033[32;1m"
 # define RED "\033[31;1m"
@@ -38,5 +39,8 @@ void	ft_bzero_test(void);
 void	ft_memcpy_test(void);
 void	ft_memmove_test(void);
 void	ft_strlcpy_test(void);
+void	ft_strlcat_test(void);
+void	ft_toupper_test(void);
+void	ft_strchr_test(void);
 
 #endif

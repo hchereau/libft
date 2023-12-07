@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:01:37 by imback            #+#    #+#             */
-/*   Updated: 2023/12/07 23:47:16 by imback           ###   ########.fr       */
+/*   Created: 2022/12/02 00:34:51 by hchereau          #+#    #+#             */
+/*   Updated: 2023/12/07 23:50:20 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-int	main(void)
+void ft_toupper_test(void)
 {
-	ft_isalpha_test();
-	ft_isdigit_test();
-	ft_isalnum_test();
-	ft_isascii_test();
-	ft_isprint_test();
-	ft_strlen_test();
-	ft_memset_test();
-	ft_bzero_test();
-	ft_memcpy_test();
-	ft_memmove_test();
-	ft_strlcpy_test();
-	ft_strlcat_test();
-	ft_toupper_test();
+	printf("\nTOUPPER_TEST\n\n");
+	check_int_eq(ft_toupper('a'),toupper('a'), 1);
+	check_int_eq(ft_toupper(13),toupper(13), 2);
+	check_int_eq(ft_toupper(0),toupper(0), 3);
+	check_int_eq(ft_toupper(' '),toupper(' '), 4);
+	check_int_eq(ft_toupper('A'),toupper('A'), 5);
 }

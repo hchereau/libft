@@ -17,6 +17,8 @@ SRCS += ft_bzero.test.c
 SRCS += ft_memcpy.test.c
 SRCS += ft_memmove.test.c
 SRCS += ft_strlcpy.test.c
+SRCS += ft_strlcat.test.c
+SRCS += ft_toupper.test.c
 
 vpath %.c $(PATH_SRCS)
 

@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.test.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:01:37 by imback            #+#    #+#             */
-/*   Updated: 2023/12/07 23:47:16 by imback           ###   ########.fr       */
+/*   Created: 2022/12/02 00:46:38 by hchereau          #+#    #+#             */
+/*   Updated: 2023/12/07 23:48:27 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_toupper(int c)
 {
-	ft_isalpha_test();
-	ft_isdigit_test();
-	ft_isalnum_test();
-	ft_isascii_test();
-	ft_isprint_test();
-	ft_strlen_test();
-	ft_memset_test();
-	ft_bzero_test();
-	ft_memcpy_test();
-	ft_memmove_test();
-	ft_strlcpy_test();
-	ft_strlcat_test();
-	ft_toupper_test();
+	if (c >= 'a' && c <= 'z')
+		return (c - DIFF_LOWER_UPPER);
+	else
+		return (c);
 }
