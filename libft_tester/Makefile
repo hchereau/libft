@@ -27,6 +27,8 @@ SRCS += ft_memchr.test.c
 SRCS += ft_memcmp.test.c
 SRCS += ft_strnstr.test.c
 SRCS += ft_atoi.test.c
+SRCS += ft_calloc.test.c
+SRCS += ft_strdup.test.c
 
 vpath %.c $(PATH_SRCS)
 

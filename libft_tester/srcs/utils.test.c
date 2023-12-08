@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 11:47:48 by imback            #+#    #+#             */
-/*   Updated: 2023/12/08 01:02:17 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/08 17:05:19 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,17 @@ void	check_array_eq(const void *ar1, const void *ar2, const int n)
 void	check_char_eq(const char *a, const char *b, const size_t n)
 {
 	if (a == b)
+		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
+	else
+	{
+		printf("%zu : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%s] : (expected) [%s] \n", a, b);
+	}
+}
+
+void	check_string_eq(const char *a, const char *b, const size_t n)
+{
+	if (!strcmp(a, b))
 		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
 	else
 	{
