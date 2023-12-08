@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.test.c                                  :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 11:41:47 by imback            #+#    #+#             */
-/*   Updated: 2023/12/08 01:03:23 by imback           ###   ########.fr       */
+/*   Created: 2022/12/05 00:15:49 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/11 18:53:48 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-void	ft_isalpha_test(void)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	printf("\nISALPHA_TEST\n\n");
-	check_int_sign_eq(ft_isalpha('a'), isalpha('a'), 1);
-	check_int_sign_eq(ft_isalpha(2), isalpha(2), 2);
-	check_int_sign_eq(ft_isalpha('A'), isalpha('A'), 3);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((uint8_t *)s1)[i] != ((uint8_t *)s2)[i])
+			return (((uint8_t *)s1)[i] - ((uint8_t *)s2)[i]);
+		++i;
+	}
+	return (0);
 }

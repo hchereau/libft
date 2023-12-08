@@ -17,6 +17,14 @@ SRCS += ft_memmove.c
 SRCS += ft_strlcpy.c
 SRCS += ft_strlcat.c
 SRCS += ft_toupper.c
+SRCS += ft_tolower.c
+SRCS += ft_strchr.c
+SRCS += ft_strrchr.c
+SRCS += ft_strncmp.c
+SRCS += ft_memchr.c
+SRCS += ft_memcmp.c
+SRCS += ft_strnstr.c
+SRCS += ft_atoi.c
 
 vpath %.c $(PATH_SRCS)
 

@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.test.c                                  :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 11:41:47 by imback            #+#    #+#             */
-/*   Updated: 2023/12/08 01:03:23 by imback           ###   ########.fr       */
+/*   Created: 2022/12/02 00:46:38 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/11 15:44:06 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-void	ft_isalpha_test(void)
+int	ft_tolower(int c)
 {
-	printf("\nISALPHA_TEST\n\n");
-	check_int_sign_eq(ft_isalpha('a'), isalpha('a'), 1);
-	check_int_sign_eq(ft_isalpha(2), isalpha(2), 2);
-	check_int_sign_eq(ft_isalpha('A'), isalpha('A'), 3);
+	if (c >= 'A' && c <= 'Z')
+		return (c + DIFF_LOWER_UPPER);
+	else
+		return (c);
 }

@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.test.c                                   :+:      :+:    :+:   */
+/*   ft_memchr.test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/02 14:58:25 by hchereau          #+#    #+#             */
-/*   Updated: 2023/12/08 00:35:46 by imback           ###   ########.fr       */
+/*   Created: 2022/12/03 22:31:18 by hchereau          #+#    #+#             */
+/*   Updated: 2023/12/08 01:08:37 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-void	ft_strchr_test(void)
+void	ft_memchr_test(void)
 {
-	printf("\nSTRCHR_TEST\n\n");
-	check_char_eq(ft_strchr("", 'a'), strchr("", 'a'), 1);
-	check_char_eq(ft_strchr("salut", 'a'), strchr("salut", 'a'), 2);
-	check_char_eq(ft_strchr("salut", 't'), strchr("salut", 't'), 3);
-	check_char_eq(ft_strchr("salut", 'w'), strchr("salut", 'w'), 4);
+	printf("\nMEMCHR_TEST\n\n");
+	char	array1[] = "salut";
+	check_array_eq(ft_memchr(array1, 'c', 4),memchr(array1, 'c', 4), 1);
+	check_array_eq(ft_memchr(array1, 'a', 3),memchr(array1, 'a', 3), 2);
+	check_array_eq(ft_memchr(array1, 't', 5),memchr(array1, 't', 5), 3);
 }

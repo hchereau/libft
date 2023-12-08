@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 11:47:48 by imback            #+#    #+#             */
-/*   Updated: 2023/12/06 18:23:32 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/08 01:02:17 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	check_int_eq(const int function, const int res, const int n)
 	}
 }
 
-void	check_sign_eq(const int function, const int res, const int n)
+void	check_int_sign_eq(const int function, const int res, const int n)
 {
 	if (function > 0 && res > 0)
 		printf("%d : %sOK%s\n", n, GREEN, WHITE);
@@ -63,32 +63,13 @@ void	check_array_eq(const void *ar1, const void *ar2, const int n)
 
 }
 
-void	check_string_eq(const char *s1, const char *s2, const int n)
+void	check_char_eq(const char *a, const char *b, const size_t n)
 {
-	int			i;
-	int			same;
-	const int	size1 = strlen(s1);
-	const int	size2 = strlen(s2);
-
-	same = 0;
-	i = 0;
-	if (size1 == size2)
-	{
-		while (i < size1 - 1)
-		{
-			if (s1[i] != s2[i])
-			{
-				++same;
-				break;
-			}
-			++i;
-		}
-	}
-	if (same == 1)
-	{
-		printf("%d : %sKO%s\n", n, RED, WHITE);
-		printf("(mine) [%s] : (expected) [%s] \n", s1, s2);
-	}
+	if (a == b)
+		printf("%zu : %sOK%s\n", n, GREEN, WHITE);
 	else
-		printf("%d : %sOK%s\n", n, GREEN, WHITE);
+	{
+		printf("%zu : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%s] : (expected) [%s] \n", a, b);
+	}
 }

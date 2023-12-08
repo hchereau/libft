@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.test.c                                  :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 11:41:47 by imback            #+#    #+#             */
-/*   Updated: 2023/12/08 01:03:23 by imback           ###   ########.fr       */
+/*   Created: 2022/12/04 13:54:15 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/11 23:39:13 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-void	ft_isalpha_test(void)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	printf("\nISALPHA_TEST\n\n");
-	check_int_sign_eq(ft_isalpha('a'), isalpha('a'), 1);
-	check_int_sign_eq(ft_isalpha(2), isalpha(2), 2);
-	check_int_sign_eq(ft_isalpha('A'), isalpha('A'), 3);
+	size_t	i;
+
+	c = (unsigned char) c;
+	i = 0;
+	while (i < n)
+	{
+		if (*(const unsigned char *)(s + i) == c)
+			return ((void *)(s + i));
+		++i;
+	}
+	return (NULL);
 }

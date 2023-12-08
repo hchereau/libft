@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:01:37 by imback            #+#    #+#             */
-/*   Updated: 2023/12/07 23:47:16 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/08 01:22:03 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,12 @@ int	main(void)
 	ft_strlcpy_test();
 	ft_strlcat_test();
 	ft_toupper_test();
+	ft_tolower_test();
+	ft_strchr_test();
+	ft_strrchr_test();
+	ft_strncmp_test();
+	ft_memchr_test();
+	ft_memcmp_test();
+	ft_strnstr_test();
+	ft_atoi_test();
 }

@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:32:28 by imback            #+#    #+#             */
-/*   Updated: 2023/12/07 23:49:31 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/08 01:23:52 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,14 @@
 
 # include <stdlib.h>
 # include <stdint.h>
+# include <stdbool.h>
 
 # define FIRST_PRINTABLE_CHAR	32
 # define LAST_PRINTABLE_CHAR	127
 # define DIFF_LOWER_UPPER		32
+# define SPACE 32
+# define FIRST_WHITESPACE 9
+# define LAST_WHITESPACE 13
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -33,5 +37,13 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
+int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+int		ft_atoi(const char *nptr);
 
 #endif
