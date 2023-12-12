@@ -30,6 +30,7 @@ SRCS += ft_atoi.test.c
 SRCS += ft_calloc.test.c
 SRCS += ft_strdup.test.c
 SRCS += ft_substr.test.c
+SRCS += ft_strjoin.test.c
 
 vpath %.c $(PATH_SRCS)
 
