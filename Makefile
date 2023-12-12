@@ -27,6 +27,7 @@ SRCS += ft_strnstr.c
 SRCS += ft_atoi.c
 SRCS += ft_calloc.c
 SRCS += ft_strdup.c
+SRCS += ft_substr.c
 
 vpath %.c $(PATH_SRCS)
 
