@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 12:03:26 by imback            #+#    #+#             */
-/*   Updated: 2023/12/12 22:40:03 by imback           ###   ########.fr       */
+/*   Updated: 2023/12/13 09:59:12 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,6 @@ void	ft_calloc_test(void);
 void	ft_strdup_test(void);
 void	ft_substr_test(void);
 void	ft_strjoin_test(void);
+void	ft_strtrim_test(void);
 
 #endif
