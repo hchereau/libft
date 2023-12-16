@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.test.c                                  :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 09:47:11 by imback            #+#    #+#             */
-/*   Updated: 2023/12/13 19:24:24 by imback           ###   ########.fr       */
+/*   Created: 2022/12/11 16:33:36 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/11 16:33:38 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-void	ft_strtrim_test(void)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	printf("\nSTRTRIM_TEST\n\n");
-	check_string_eq(ft_strtrim("saaluut", "au"), "slt", 1);
+	size_t	i;
+
+	if (s != NULL && f != NULL)
+	{
+		i = 0;
+		while (s[i] != '\0')
+		{
+			f(i, s + i);
+			++i;
+		}
+	}
 }

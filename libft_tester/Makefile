@@ -32,6 +32,9 @@ SRCS += ft_strdup.test.c
 SRCS += ft_substr.test.c
 SRCS += ft_strjoin.test.c
 SRCS += ft_strtrim.test.c
+SRCS += ft_split.test.c
+SRCS += ft_itoa.test.c
+SRCS += ft_strmapi.test.c
 
 vpath %.c $(PATH_SRCS)
 

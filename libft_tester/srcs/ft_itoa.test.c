@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.test.c                                  :+:      :+:    :+:   */
+/*   ft_itoa.test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 09:47:11 by imback            #+#    #+#             */
-/*   Updated: 2023/12/13 19:24:24 by imback           ###   ########.fr       */
+/*   Created: 2023/12/16 10:08:15 by imback            #+#    #+#             */
+/*   Updated: 2023/12/16 10:24:45 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-void	ft_strtrim_test(void)
+void	ft_itoa_test(void)
 {
-	printf("\nSTRTRIM_TEST\n\n");
-	check_string_eq(ft_strtrim("saaluut", "au"), "slt", 1);
+	printf("\nITOA_TEST\n\n");
+	check_string_eq(ft_itoa(12), "12", 1);
+	check_string_eq(ft_itoa(0), "0", 2);
 }

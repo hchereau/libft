@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.test.c                                  :+:      :+:    :+:   */
+/*   ft_split.test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 09:47:11 by imback            #+#    #+#             */
-/*   Updated: 2023/12/13 19:24:24 by imback           ###   ########.fr       */
+/*   Created: 2023/12/16 09:51:57 by imback            #+#    #+#             */
+/*   Updated: 2023/12/16 09:56:39 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-void	ft_strtrim_test(void)
+void	ft_split_test(void)
 {
-	printf("\nSTRTRIM_TEST\n\n");
-	check_string_eq(ft_strtrim("saaluut", "au"), "slt", 1);
+	printf("\nSPLIT_TEST\n\n");
 }
