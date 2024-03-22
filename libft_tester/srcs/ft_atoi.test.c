@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 16:19:51 by hchereau          #+#    #+#             */
-/*   Updated: 2023/12/08 01:22:28 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/20 15:58:54 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,3 @@ void ft_atoi_test(void)
 	check_int_eq(ft_atoi("i42i"), atoi("i42i"), 6);
 	check_int_eq(ft_atoi("		42i"), atoi("		42i"), 7);
 }
-
-

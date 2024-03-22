@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.test.c                                 :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/16 10:50:51 by imback            #+#    #+#             */
-/*   Updated: 2023/12/16 15:07:25 by imback           ###   ########.fr       */
+/*   Created: 2022/12/11 15:27:42 by hchereau          #+#    #+#             */
+/*   Updated: 2022/12/11 15:27:44 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-void	ft_striteri_test(void)
+void	ft_putendl_fd(char *s, int fd)
 {
-	printf("\nSTRITERI_TEST\n\n");
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

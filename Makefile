@@ -33,6 +33,10 @@ SRCS += ft_strtrim.c
 SRCS += ft_split.c
 SRCS += ft_itoa.c
 SRCS += ft_strmapi.c
+SRCS += ft_putchar_fd.c
+SRCS += ft_putstr_fd.c
+SRCS += ft_putendl_fd.c
+SRCS += ft_putnbr_fd.c
 
 vpath %.c $(PATH_SRCS)
 
@@ -41,6 +45,8 @@ vpath %.c $(PATH_SRCS)
 INCLUDES_LIBFT = includes/
 
 INCLUDES += -I $(INCLUDES_LIBFT)
+
+HEADER += $(INCLUDES_LIBFT)/libft.h
 
 ### OBJS
 
@@ -73,9 +79,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 		$(AR) $@ $^
 
-$(OBJS): $(PATH_OBJS)/%.o: %.c
+$(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 		mkdir -p $(PATH_OBJS)
-		$(CC) $(CFLAGS) -c $^ -o $@ $(INCLUDES)
+		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
 test: $(NAME)
 		$(MAKE) -sC $(TEST_FOLDER)
@@ -94,5 +100,5 @@ fclean: clean
 re: fclean
 		$(MAKE)
 
-.PHONY:
+.PHONY: all clean fclean re 
 .SILENT: test

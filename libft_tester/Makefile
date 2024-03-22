@@ -35,6 +35,7 @@ SRCS += ft_strtrim.test.c
 SRCS += ft_split.test.c
 SRCS += ft_itoa.test.c
 SRCS += ft_strmapi.test.c
+SRCS += ft_striteri.test.c
 
 vpath %.c $(PATH_SRCS)
 
@@ -96,4 +97,3 @@ fclean: clean
 re: fclean
 		$(MAKE)
 .PHONY:
-
