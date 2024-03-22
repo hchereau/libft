@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hchereau <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 16:13:28 by hchereau          #+#    #+#             */
-/*   Updated: 2022/12/11 16:14:29 by hchereau         ###   ########.fr       */
+/*   Updated: 2024/03/22 18:21:20 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ static size_t	get_size_nb(int nb)
 	return (size);
 }
 
-static unsigned long	get_abs(int n)
+static unsigned long	get_abs(const int n)
 {
 	if (n < 0)
 		return (-n);
 	return (n);
 }
 
-static void	cp_nb(char *dest, int n, size_t size_nb)
+static void	cp_nb(char *const dest, const int n, const size_t size_nb)
 {
 	size_t			i;
 	unsigned int	abs_n;

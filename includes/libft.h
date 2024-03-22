@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:32:28 by imback            #+#    #+#             */
-/*   Updated: 2023/12/16 15:48:20 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/22 18:12:37 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <stdbool.h>
 # include <unistd.h>
 
+# define FIRST_ASCII_CHAR	0
+# define LAST_ASCII_CHAR	127
 # define FIRST_PRINTABLE_CHAR	32
 # define LAST_PRINTABLE_CHAR	127
 # define DIFF_LOWER_UPPER		32

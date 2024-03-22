@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/03 22:45:19 by imback            #+#    #+#             */
-/*   Updated: 2023/12/03 22:55:47 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/22 18:13:13 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isascii(int c)
 {
-	return (c >= 0 && c <= 127);
+	return (c >= FIRST_ASCII_CHAR && c <= LAST_ASCII_CHAR);
 }
