@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 11:47:48 by imback            #+#    #+#             */
-/*   Updated: 2024/03/25 18:13:57 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/25 18:28:14 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,13 @@ void	check_string_array_eq(const char **array1, const char **array2, const int n
 	if (array1 == NULL && array2 == NULL)
 	{
 		printf("%d : %sOK%s\n", n, GREEN, WHITE);
+		return ;
+	}
+	else if (array1 == NULL || array2 == NULL)
+	{
+		printf("%d : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%d] : (expected) [%d] \n", array1 != NULL, array2 != NULL);
+		return ;
 	}
 	while (array1[i] != NULL && array2[i] != NULL)
 	{
