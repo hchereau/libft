@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 12:03:26 by imback            #+#    #+#             */
-/*   Updated: 2023/12/16 15:07:38 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/25 17:55:34 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	check_size_t_eq(const size_t function, const size_t res, const int n);
 void	check_array_eq(const void *ar1, const void *ar2, const int n);
 void	check_char_eq(const char *a, const char *b, const size_t n);
 void	check_string_eq(const char *a, const char *b, const size_t n);
+void	check_string_array_eq(const char **array1, const char **array2, const int n);
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
 void	ft_isalnum_test(void);

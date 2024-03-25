@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 16:40:46 by imback            #+#    #+#             */
-/*   Updated: 2023/12/04 16:56:45 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/23 12:23:00 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void	*s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((unsigned char *)s)[i] = (unsigned char)c;
+		((uint8_t *)s)[i] = (uint8_t)c;
 		++i;
 	}
 	return (s);

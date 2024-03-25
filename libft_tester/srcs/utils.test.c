@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 11:47:48 by imback            #+#    #+#             */
-/*   Updated: 2023/12/08 17:05:19 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/25 18:13:57 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,37 @@ void	check_size_t_eq(const size_t function, const size_t res, const int n)
 	}
 }
 
+void	check_string_array_eq(const char **array1, const char **array2, const int n)
+{
+	size_t	i = 0;
+	if (array1 == NULL && array2 == NULL)
+	{
+		printf("%d : %sOK%s\n", n, GREEN, WHITE);
+	}
+	while (array1[i] != NULL && array2[i] != NULL)
+	{
+		if (strcmp(array1[i], array2[i]))
+		{
+			printf("%d : %sKO%s\n", n, RED, WHITE);
+			for (size_t y = 0; y <= i; ++y)
+			{
+				printf("(mine) [%s] : (expected) [%s] \n", array1[y], array2[y]);
+			}
+			return ;
+		}
+		++i;
+	}
+	if (array1[i] == NULL && array2[i] == NULL)
+	{
+		printf("%d : %sOK%s\n", n, GREEN, WHITE);
+	}
+	else
+	{
+		printf("%d : %sKO%s\n", n, RED, WHITE);
+		printf("(mine) [%s] : (expected) [%s] \n", array1[i], array2[i]);
+	}
+}
+
 void	check_array_eq(const void *ar1, const void *ar2, const int n)
 {
 	if (!ar1 && !ar2)
@@ -58,7 +89,7 @@ void	check_array_eq(const void *ar1, const void *ar2, const int n)
 	else
 	{
 		printf("%d : %sKO%s\n", n, RED, WHITE);
-		printf("(mine) [%p] : (expected) [%p] \n", ar1, ar1);
+		printf("(mine) [%p] : (expected) [%p] \n", ar1, ar2);
 	}
 
 }
