@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 12:03:26 by imback            #+#    #+#             */
-/*   Updated: 2024/03/25 17:55:34 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/25 18:37:09 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <ctype.h>
 # include <string.h>
 # include <bsd/string.h>
+# include <limits.h>
 
 # define GREEN "\033[32;1m"
 # define RED "\033[31;1m"

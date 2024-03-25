@@ -1,6 +1,6 @@
 NAME = libft.a
 
-### SRCS
+### SRCS #######################################################################
 
 PATH_SRCS = srcs/
 
@@ -33,6 +33,7 @@ SRCS += ft_strtrim.c
 SRCS += ft_split.c
 SRCS += ft_itoa.c
 SRCS += ft_strmapi.c
+SRCS += ft_striteri.c
 SRCS += ft_putchar_fd.c
 SRCS += ft_putstr_fd.c
 SRCS += ft_putendl_fd.c
@@ -40,7 +41,11 @@ SRCS += ft_putnbr_fd.c
 
 vpath %.c $(PATH_SRCS)
 
-### HEADER
+### BONUS ######################################################################
+
+SRCS_BONUS += ft_lstnew.c
+
+### HEADER #####################################################################
 
 INCLUDES_LIBFT = includes/
 
@@ -48,40 +53,49 @@ INCLUDES += -I $(INCLUDES_LIBFT)
 
 HEADER += $(INCLUDES_LIBFT)/libft.h
 
-### OBJS
+### OBJS #######################################################################
 
 PATH_OBJS = objs/
 
-OBJS = $(patsubst %.c, ${PATH_OBJS}/%.o, ${SRCS})
+OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
 
-### COMPILATION
+OBJS_BONUS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
+
+### COMPILATION ################################################################
 
 CC = clang
 CFLAGS += -Werror
 CFLAGS += -Wextra
 CFLAGS += -Wall
 
-AR = ar rcs
+AR = ar
 
 ifeq (${debug}, true)
 		CFLAGS += -fsanitize=adress,undefined -g3
 endif
 
-### TEST
+### TEST #######################################################################
 
 TEST_FOLDER = libft_tester/
 RUN_TESTS = $(TEST_FOLDER)/run_test
 
-### RULE
+### RULE #######################################################################
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(AR) $@ $^
+		$(AR) rcs $@ $^
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 		mkdir -p $(PATH_OBJS)
 		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+
+$(OBJS_BONUS): $(PATH_OBJS)/%.o: %.c $(HEADER)
+		mkdir -p $(PATH_OBJS)
+		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+
+bonus: $(OBJS) $(OBJS_BONUS)
+		$(AR) rcs $(NAME) $^
 
 test: $(NAME)
 		$(MAKE) -sC $(TEST_FOLDER)
@@ -100,5 +114,5 @@ fclean: clean
 re: fclean
 		$(MAKE)
 
-.PHONY: all clean fclean re 
+.PHONY: all bonus clean fclean re
 .SILENT: test

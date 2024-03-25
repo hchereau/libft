@@ -96,4 +96,4 @@ fclean: clean
 
 re: fclean
 		$(MAKE)
-.PHONY:
+.PHONY: clean fclean re
