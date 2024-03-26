@@ -46,6 +46,9 @@ ifeq ($(MAKECMDGOALS),bonus)
 	SRCS += ft_lstadd_front_bonus.c
 	SRCS += ft_lstsize_bonus.c
 	SRCS += ft_lstlast_bonus.c
+	SRCS += ft_lstdelone_bonus.c
+	SRCS += ft_lstclear_bonus.c
+	SRCS += ft_lstmap_bonus.c
 endif
 
 vpath %.c $(PATH_SRCS)
