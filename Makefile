@@ -39,11 +39,16 @@ SRCS += ft_putstr_fd.c
 SRCS += ft_putendl_fd.c
 SRCS += ft_putnbr_fd.c
 
-vpath %.c $(PATH_SRCS)
-
 ### BONUS ######################################################################
 
-SRCS_BONUS += ft_lstnew.c
+ifeq ($(MAKECMDGOALS),bonus)
+	SRCS += ft_lstnew_bonus.c
+	SRCS += ft_lstadd_front_bonus.c
+	SRCS += ft_lstsize_bonus.c
+	SRCS += ft_lstlast_bonus.c
+endif
+
+vpath %.c $(PATH_SRCS)
 
 ### HEADER #####################################################################
 
@@ -59,8 +64,6 @@ PATH_OBJS = objs/
 
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
 
-OBJS_BONUS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
-
 ### COMPILATION ################################################################
 
 CC = clang
@@ -70,8 +73,8 @@ CFLAGS += -Wall
 
 AR = ar
 
-ifeq (${debug}, true)
-		CFLAGS += -fsanitize=adress,undefined -g3
+ifeq ($(debug), true)
+		CFLAGS += -fsanitize=address,undefined -g3
 endif
 
 ### TEST #######################################################################
@@ -90,18 +93,16 @@ $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 		mkdir -p $(PATH_OBJS)
 		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
-$(OBJS_BONUS): $(PATH_OBJS)/%.o: %.c $(HEADER)
-		mkdir -p $(PATH_OBJS)
-		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
-
-bonus: $(OBJS) $(OBJS_BONUS)
-		$(AR) rcs $(NAME) $^
+bonus: $(NAME)
 
 test: $(NAME)
 		$(MAKE) -sC $(TEST_FOLDER)
 		echo -n "\n<--------TESTS-------->\n\n"
-#		valgrind --leak-check=full --show-leak-kinds=all ./$(RUN_TESTS) a faire si prblm leaks
-		./$(RUN_TESTS)
+		@if [ "debug_bonus" = "true" ]; then \
+			valgrind --leak-check=full --show-leak-kinds=all ./$(RUN_TESTS); \
+		else \
+			./$(RUN_TESTS); \
+		fi
 
 clean:
 		$(RM) -r $(PATH_OBJS)

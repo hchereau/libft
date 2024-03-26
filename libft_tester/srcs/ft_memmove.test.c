@@ -6,7 +6,7 @@
 /*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 16:00:36 by imback            #+#    #+#             */
-/*   Updated: 2024/03/23 12:36:23 by imback           ###   ########.fr       */
+/*   Updated: 2024/03/26 11:05:50 by imback           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ static void	check_create_array_overlap(size_t size, size_t n)
 	uint8_t	array1[] = "saluttt";
 	uint8_t	array2[] = "saluttt";
 
+	// (void)n;
+	// write(STDOUT_FILENO, ft_memmove(array1 + 3, array1, size), size);
+	// write(1, "\n_____________________________________\n", 41);
+	// write(STDOUT_FILENO, memmove(array2 + 3, array2, size), size);
 	check_string_eq(ft_memmove(array1 + 3, array1, size), memmove(array2 + 3, array2, size), n);
 }
 
