@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hchereau <hchereau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:32:28 by imback            #+#    #+#             */
-/*   Updated: 2024/03/26 18:07:21 by imback           ###   ########.fr       */
+/*   Updated: 2024/05/16 14:40:20 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define FIRST_ASCII_CHAR	0
 # define LAST_ASCII_CHAR	127
 # define FIRST_PRINTABLE_CHAR	32
-# define LAST_PRINTABLE_CHAR	127
+# define LAST_PRINTABLE_CHAR	126
 # define DIFF_LOWER_UPPER		32
 # define SPACE 32
 # define FIRST_WHITESPACE 9
@@ -71,6 +71,7 @@ t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
