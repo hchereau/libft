@@ -38,20 +38,15 @@ SRCS += ft_putchar_fd.c
 SRCS += ft_putstr_fd.c
 SRCS += ft_putendl_fd.c
 SRCS += ft_putnbr_fd.c
-
-### BONUS ######################################################################
-
-ifeq ($(MAKECMDGOALS),bonus)
-	SRCS += ft_lstnew_bonus.c
-	SRCS += ft_lstadd_front_bonus.c
-	SRCS += ft_lstadd_back_bonus.c
-	SRCS += ft_lstsize_bonus.c
-	SRCS += ft_lstlast_bonus.c
-	SRCS += ft_lstdelone_bonus.c
-	SRCS += ft_lstclear_bonus.c
-	SRCS += ft_lstmap_bonus.c
-	SRCS += ft_lstiter_bonus.c
-endif
+SRCS += ft_lstnew_bonus.c
+SRCS += ft_lstadd_front_bonus.c
+SRCS += ft_lstadd_back_bonus.c
+SRCS += ft_lstsize_bonus.c
+SRCS += ft_lstlast_bonus.c
+SRCS += ft_lstdelone_bonus.c
+SRCS += ft_lstclear_bonus.c
+SRCS += ft_lstmap_bonus.c
+SRCS += ft_lstiter_bonus.c
 
 vpath %.c $(PATH_SRCS)
 
@@ -103,11 +98,7 @@ bonus: $(NAME)
 test: $(NAME)
 		$(MAKE) -sC $(TEST_FOLDER)
 		echo -n "\n<--------TESTS-------->\n\n"
-		@if [ "debug_bonus" = "true" ]; then \
-			valgrind --leak-check=full --show-leak-kinds=all ./$(RUN_TESTS); \
-		else \
-			./$(RUN_TESTS); \
-		fi
+		./$(RUN_TESTS);
 
 clean:
 		$(RM) -r $(PATH_OBJS)
