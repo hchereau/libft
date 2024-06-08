@@ -47,6 +47,8 @@ SRCS += ft_lstdelone_bonus.c
 SRCS += ft_lstclear_bonus.c
 SRCS += ft_lstmap_bonus.c
 SRCS += ft_lstiter_bonus.c
+SRCS += get_next_line.c
+SRCS += get_next_line_utils.c
 
 vpath %.c $(PATH_SRCS)
 

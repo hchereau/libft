@@ -6,7 +6,7 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:32:28 by imback            #+#    #+#             */
-/*   Updated: 2024/05/20 10:16:45 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/06/08 15:28:43 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdint.h>
 # include <stdbool.h>
 # include <unistd.h>
+# include "get_next_line.h"
 
 # define FIRST_ASCII_CHAR	0
 # define LAST_ASCII_CHAR	127
