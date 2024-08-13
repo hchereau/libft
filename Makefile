@@ -2,7 +2,7 @@ NAME = libft.a
 
 ### SRCS #######################################################################
 
-PATH_SRCS = srcs/
+PATH_SRCS = srcs/libft/
 
 SRCS += ft_isalpha.c
 SRCS += ft_isdigit.c
@@ -47,10 +47,32 @@ SRCS += ft_lstdelone_bonus.c
 SRCS += ft_lstclear_bonus.c
 SRCS += ft_lstmap_bonus.c
 SRCS += ft_lstiter_bonus.c
-SRCS += get_next_line.c
-SRCS += get_next_line_utils.c
 
 vpath %.c $(PATH_SRCS)
+
+### GET_NEXT_LINE ##############################################################
+
+PATH_SRCS_GNL = srcs/gnl/
+
+SRCS_GNL += get_next_line.c
+SRCS_GNL += get_next_line_utils.c
+
+vpath %.c $(PATH_SRCS_GNL)
+
+### PRINTF #####################################################################
+
+PATH_SRCS_PRINTF = srcs/printf/
+
+SRCS_PRINTF += add_to_file_string.c
+SRCS_PRINTF += ft_printf.c
+SRCS_PRINTF += ft_uitoa.c
+SRCS_PRINTF += utils_buffer.c
+SRCS_PRINTF += utils_num.c
+SRCS_PRINTF += utils_pointeur.c
+SRCS_PRINTF += utils_string.c
+SRCS_PRINTF += utils.c
+
+vpath %.c $(PATH_SRCS_PRINTF)
 
 ### HEADER #####################################################################
 
@@ -64,7 +86,9 @@ HEADER += $(INCLUDES_LIBFT)/libft.h
 
 PATH_OBJS = objs/
 
-OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
+ OBJS += $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
+ OBJS += $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS_GNL))
+ OBJS += $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS_PRINTF))
 
 ### COMPILATION ################################################################
 
@@ -97,18 +121,18 @@ $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 
 bonus: $(NAME)
 
-test: $(NAME)
-		$(MAKE) -sC $(TEST_FOLDER)
-		echo -n "\n<--------TESTS-------->\n\n"
-		./$(RUN_TESTS);
+# test: $(NAME)
+# 		$(MAKE) -sC $(TEST_FOLDER)
+# 		echo -n "\n<--------TESTS-------->\n\n"
+# 		./$(RUN_TESTS);
 
 clean:
 		$(RM) -r $(PATH_OBJS)
-		$(MAKE) -C $(TEST_FOLDER) clean
+#		$(MAKE) -C $(TEST_FOLDER) clean
 
 fclean: clean
 		$(RM) $(NAME)
-		$(MAKE) -C $(TEST_FOLDER) fclean
+#		$(MAKE) -C $(TEST_FOLDER) fclean
 
 re: fclean
 		$(MAKE)
