@@ -18,6 +18,7 @@
 # include <stdbool.h>
 # include <unistd.h>
 # include "get_next_line.h"
+# include "ft_printf.h"
 
 # define FIRST_ASCII_CHAR	0
 # define LAST_ASCII_CHAR	127
