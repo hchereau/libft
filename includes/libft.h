@@ -6,7 +6,7 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:32:28 by imback            #+#    #+#             */
-/*   Updated: 2024/06/08 15:28:43 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/09/06 13:55:20 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,4 +78,8 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+size_t	count_words(const char *s, char c);
+int		ft_atoi_base(char *str, char *base);
+void	free_strs(char **strs);
+int		ft_abs(int nb);
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: imback <imback@student.42.fr>              +#+  +:+       +#+        */
+/*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 00:28:38 by hchereau          #+#    #+#             */
-/*   Updated: 2023/12/16 15:02:54 by imback           ###   ########.fr       */
+/*   Updated: 2024/09/06 13:53:43 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static char	*get_next_words(const char **s, char c)
 	return (word);
 }
 
-static size_t	count_words(const char *s, char c)
+size_t	count_words(const char *s, char c)
 {
 	size_t	size_split;
 	bool	is_word;
@@ -61,7 +61,7 @@ static size_t	count_words(const char *s, char c)
 	return (size_split + (is_word == true));
 }
 
-static void	free_strs(char **strs)
+void	free_strs(char **strs)
 {
 	size_t	incre;
 
