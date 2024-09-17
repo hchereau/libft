@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_dprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 07:19:16 by hchereau          #+#    #+#             */
-/*   Updated: 2024/06/09 12:21:56 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/09/17 11:04:07 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	init_data(t_data *data)
 	data->index_buffer = 0;
 }
 
-int	ft_printf(const char *str, ...)
+int	ft_dprintf(int fd, const char *str, ...)
 {
 	struct s_data	data;
 	va_list			args;
@@ -55,7 +55,7 @@ int	ft_printf(const char *str, ...)
 	init_data(&data);
 	get_string(str, &data, args, funtab);
 	va_end(args);
-	data.len_str_final = write(1, data.str_final, data.len_str_final);
+	data.len_str_final = write(fd, data.str_final, data.len_str_final);
 	free(data.str_final);
 	return (data.len_str_final);
 }

@@ -66,7 +66,7 @@ vpath %.c $(PATH_SRCS_GNL)
 PATH_SRCS_PRINTF = srcs/printf/
 
 SRCS_PRINTF += add_to_file_string.c
-SRCS_PRINTF += ft_printf.c
+SRCS_PRINTF += ft_dprintf.c
 SRCS_PRINTF += ft_uitoa.c
 SRCS_PRINTF += utils_buffer.c
 SRCS_PRINTF += utils_num.c

@@ -6,7 +6,7 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 11:03:25 by hchereau          #+#    #+#             */
-/*   Updated: 2024/06/08 15:54:46 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/09/17 11:05:45 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	get_arg_x(t_data *data, va_list args);
 void	get_arg_xmaj(t_data *data, va_list args);
 int		add_pourcent(t_data *data, ssize_t index_funtab);
 void	convert_base(t_data *data, size_t nb, char	*base);
-int		ft_printf(const char *str, ...);
+int		ft_dprintf(int fd, const char *str, ...);
 char	*ft_uitoa(unsigned int n);
 ssize_t	how_printable(char c);
 void	get_size_final(t_data *data);
