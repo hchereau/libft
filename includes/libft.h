@@ -6,7 +6,7 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:32:28 by imback            #+#    #+#             */
-/*   Updated: 2024/09/06 13:55:20 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:15:29 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,5 @@ size_t	count_words(const char *s, char c);
 int		ft_atoi_base(char *str, char *base);
 void	free_strs(char **strs);
 int		ft_abs(int nb);
+long	ft_atol(const char *str);
 #endif

@@ -49,6 +49,7 @@ SRCS += ft_lstmap_bonus.c
 SRCS += ft_lstiter_bonus.c
 SRCS += ft_abs.c
 SRCS += ft_atoi_base.c
+SRCS += ft_atol.c
 
 vpath %.c $(PATH_SRCS)
 
