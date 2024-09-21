@@ -6,7 +6,7 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 14:09:31 by hucherea          #+#    #+#             */
-/*   Updated: 2024/09/20 16:54:48 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/09/21 13:24:04 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static long	convert_str_to_long(const char *str, int sign)
 		prev_nb = nb;
 		nb = nb * 10 + (*str - '0');
 		if ((sign == 1 && nb < prev_nb)
-			|| (sign == -1 && -nb > -prev_nb))
+			|| (sign == -1 && - nb > -prev_nb))
 		{
 			if (sign == 1)
 				return (LONG_MAX);
