@@ -6,13 +6,13 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/02 14:07:08 by hucherea          #+#    #+#             */
-/*   Updated: 2024/10/02 14:07:25 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/10/07 14:15:43 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strslen(char **strs)
+size_t	ft_strslen(const char **strs)
 {
 	size_t	i;
 

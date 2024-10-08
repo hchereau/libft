@@ -6,7 +6,7 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 00:28:38 by hchereau          #+#    #+#             */
-/*   Updated: 2024/09/06 13:53:43 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/10/02 17:24:53 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ void	free_strs(char **strs)
 {
 	size_t	incre;
 
+	if (strs == NULL)
+		return ;
 	incre = 0;
 	while (strs[incre] != NULL)
 	{
