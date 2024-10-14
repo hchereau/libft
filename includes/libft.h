@@ -6,7 +6,7 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/02 17:32:28 by imback            #+#    #+#             */
-/*   Updated: 2024/10/07 14:16:07 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/10/14 11:10:27 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,5 @@ void	free_strs(char **strs);
 int		ft_abs(int nb);
 long	ft_atol(const char *str);
 size_t	ft_strslen(const char **strs);
+int		ft_strcmp(const char *s1, const char *s2);
 #endif
