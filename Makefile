@@ -52,6 +52,7 @@ SRCS += ft_atoi_base.c
 SRCS += ft_atol.c
 SRCS += ft_strslen.c
 SRCS += ft_strcmp.c
+SRCS += ft_realloc.c
 
 vpath %.c $(PATH_SRCS)
 
